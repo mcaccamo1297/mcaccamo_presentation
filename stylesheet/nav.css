@@ -1,0 +1,73 @@
+/* styles.css */
+
+.navbar {
+  background-color: hsla(0, 0%, 100%, 0.8); 
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 1.25rem; /* rem è un'unità di misura relativa che si basa sulla dimensione del font dell'elemento radice (root element) del documento */
+}
+
+#circle-image {
+  background: url(../img/profile.png);
+  background-size: cover;
+  background-position: center;
+  border-radius: 50px; /* Circle image */
+  margin-right: 0.5rem; /* Space between image and text */
+  width: 3rem;
+  height: 3rem;
+}
+
+.navbar-toggle {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  display: none; /* Hide by default */
+}
+
+.navbar-menu {
+  list-style: none;
+  display: flex;
+}
+
+.navbar-menu li {
+  margin-left: 20px;
+}
+
+.navbar-menu li a {
+  color: #000;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.navbar-menu li a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .navbar-menu {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+  }
+  .navbar-menu li {
+      margin: 0;
+  }
+  .navbar-toggle {
+      display: block;
+  }
+}
+/* styles.css */
+.navbar-menu-visible {
+  display: flex !important;
+}

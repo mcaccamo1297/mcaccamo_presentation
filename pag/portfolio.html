@@ -1,0 +1,1836 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css">
+    <script src="../js/nav.js"></script>
+    <link href="https://fonts.cdnfonts.com/css/harry-potter" rel="stylesheet">
+    <link rel="stylesheet" href="../stylesheet/nav.css">
+    <link rel="stylesheet" href="../stylesheet/style.css">
+    <link rel="stylesheet" href="../stylesheet/portfolio.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.Default.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-brand"><a class="navbar-brand" href="../index.html">
+                <div id="circle-image"></div>
+                Mariachiara Caccamo
+            </a></div>
+        <button class="navbar-toggle" id="navbarToggle"><i class="bi bi-list"></i></button>
+        <ul class="navbar-menu" id="navbarMenu">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="./curriculum.html">Curriculum</a></li>
+            <li><a href="./esperienze.html">Altre esperienze</a></li>
+            <li><a href="./portfolio.html">Portfolio</a></li>
+        </ul>
+    </nav>
+
+    <main class="portfolio">
+
+        <section class="portfolio-section">
+            <div class="banner vdj">
+                <div class="banner-text">
+                    <h2>Il mio lavoro per La Voce dell'Jonio:</h2>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="rubric">
+                    <h1>La Voce dei Migranti</h1>
+                    <p><b>La Voce dei Migranti</b> è la rubrica de <i>La Voce dell'Jonio</i> dedicata alle tematiche
+                        riguardanti emigrazione e immigrazione. Ma anche spopolamento, storie di accoglienza e
+                        caratteristiche dei paesi dai quali provengono tanti rifugiati o richiedenti asilo. </p>
+                    <div class="carousel">
+                        <div class="carousel-track" id="carouselTrack1">
+                            <article class="carousel-card"
+                                onclick="openModal('https\:\/\/www.vdj.it/mediterraneo-chiave-per-la-pace-nella-visione-di-giorgio-la-pira-ed-enrico-mattei/')">
+                                <img
+                                    src="https://www.vdj.it/wp-content/uploads/2022/11/mediterraneo-la-pira-mattei-scaled.jpg">
+                                <div class="card-body">
+                                    <h3>Mediterraneo / Un ponte di pace nella visione di Giorgio La Pira ed Enrico
+                                        Mattei</h3>
+                                </div>
+                            </article>
+                            <article class="carousel-card"
+                                onclick="openModal('https\:\/\/www.vdj.it/mediterraneo-nella-visione-di-giorgio-la-pira-luogo-di-incontro-tra-i-popoli/')">
+                                <img
+                                    src="https://www.vdj.it/wp-content/uploads/2022/10/mediterraneo-giorgio-la-pira-768x486.png">
+                                <div class="card-body">
+                                    <h3>Mediterraneo / Oggi confine di morte, nella visione di Giorgio La Pira ponte tra
+                                        i popoli</h3>
+                                </div>
+                            </article>
+                            <article class="carousel-card"
+                                onclick="openModal('https\:\/\/www.vdj.it/migranti-le-proposte-dellonorevole-marco-tarquinio-sulla-gestione-dei-flussi-e-il-conflitto-in-ucraina/')">
+                                <img
+                                    src="https://www.vdj.it/wp-content/uploads/2024/12/emergenza-migranti-onorevole-marco-tarquinio.jpg">
+                                <div class="card-body">
+                                    <h3>Migranti / Le proposte dell’onorevole Marco Tarquinio sulla gestione dei flussi
+                                        e il conflitto in Ucraina</h3>
+                                </div>
+                            </article>
+                            <article class="carousel-card"
+                                onclick="openModal('https\:\/\/www.vdj.it/mediterraneo-la-nave-dei-vescovi-il-sostegno-della-fondazione-migrantes-alle-operazioni-di-soccorso/')">
+                                <img
+                                    src="https://www.vdj.it/wp-content/uploads/2024/10/nave-vescovi-fondazione-migrantes-696x453.jpg">
+                                <div class="card-body">
+                                    <h3>Mediterraneo / “La nave dei vescovi”: il sostegno della Fondazione Migrantes
+                                        alle operazioni di soccorso</h3>
+                                </div>
+                            </article>
+                            <article class="carousel-card"
+                                onclick="openModal('https\:\/\/www.vdj.it/patrizia-giunti-un-mediterraneo-di-pace-sulla-scia-di-giorgio-la-pira/')">
+                                <img
+                                    src="https://www.vdj.it/wp-content/uploads/2024/09/mediterraneo-giunti-la-pira-pozzallo-1536x1152.jpg">
+                                <div class="card-body">
+                                    <h3>Patrizia Giunti: per un Mediterraneo di pace, seguire la scia di Giorgio La Pira
+                                    </h3>
+                                </div>
+                            </article>
+                            <article class="carousel-card"
+                                onclick="openModal('https\:\/\/www.vdj.it/migranti-da-pozzallo-crisi-e-prospettive-del-mediterraneo-sulla-scia-di-giorgio-la-pira/')">
+                                <img
+                                    src="https://www.vdj.it/wp-content/uploads/2024/09/Centro-Mediterraneo-La-Pira-Pozzallo-7-settembre-1536x1152.jpg">
+                                <div class="card-body">
+                                    <h3>Migranti / Da Pozzallo, crisi e prospettive del Mediterraneo sulla scia di
+                                        Giorgio La Pira</h3>
+                                </div>
+                            </article>
+                            <article class="carousel-card"
+                                onclick="openModal('https\:\/\/www.vdj.it/migranti-centro-mediterraneo-la-pira-pozzallo-dialogo-pace/')">
+                                <img
+                                    src="https://www.vdj.it/wp-content/uploads/2024/08/convegno-pozzallo-la-pira-mediterraneo-1068x1068.jpg">
+                                <div class="card-body">
+                                    <h3>Migranti / Il Centro Mediterraneo La Pira convoca a Pozzallo un incontro per il
+                                        dialogo e la pace</h3>
+                                </div>
+                            </article>
+                            <article class="carousel-card"
+                                onclick="openModal('https\:\/\/www.vdj.it/migranti-limpatto-della-legge-cutro-su-accoglienza-e-integrazione/')">
+                                <img
+                                    src="https://www.vdj.it/wp-content/uploads/2024/06/legge-cutro-migranti-1536x1152.jpg">
+                                <div class="card-body">
+                                    <h3>Migranti / L'impatto della Legge Cutro su accoglienza e integrazione</h3>
+                                </div>
+                            </article>
+                            <article class="carousel-card"
+                                onclick="openModal('https\:\/\/www.vdj.it/migranti-il-protocollo-italia-albania-sui-cpr-illusioni-costi-e-controversie/')">
+                                <img
+                                    src="https://www.vdj.it/wp-content/uploads/2024/04/protocollo-italia-albania-cpr-768x432.jpg">
+                                <div class="card-body">
+                                    <h3>Migranti / Il protocollo Italia-Albania sui CPR: illusioni, costi e controversie
+                                    </h3>
+                                </div>
+                            </article>
+                            <article class="carousel-card"
+                                onclick="openModal('https\:\/\/www.vdj.it/migranti-presentazione-report-sul-diritto-asilo-2023/')">
+                                <img
+                                    src="https://www.vdj.it/wp-content/uploads/2024/03/repoprt-diritto-asilo-dati-768x512.jpg">
+                                <div class="card-body">
+                                    <h3>Migranti / Riparte il Centro Mediterraneo La Pira con Report sul diritto d'asilo
+                                        2023</h3>
+                                </div>
+                            </article>
+                            <article class="carousel-card"
+                                onclick="openModal('https\:\/\/www.vdj.it/migranti-centro-mediterraneo-la-pira-ripropone-report-sul-diritto-asilo-2023/')">
+                                <img
+                                    src="https://www.vdj.it/wp-content/uploads/2024/03/report-diritto-asilo-2023-migranti-768x512.jpg">
+                                <div class="card-body">
+                                    <h3>Migranti / Il Centro Mediterraneo La Pira ripropone il Report sul diritto
+                                        d'asilo 2023 in quattro tappe in Sicilia</h3>
+                                </div>
+                            </article>
+                            <article class="carousel-card"
+                                onclick="openModal('https\:\/\/www.vdj.it/caritas-acireale-per-un-aiuto-concreto-allucraina/')">
+                                <img
+                                    src="https://www.vdj.it/wp-content/uploads/2022/03/Caritas-Acireale-Ucraina-aiuto-umanitario-1068x712.jpg">
+                                <div class="card-body">
+                                    <h3>Caritas Acireale / Per un aiuto concreto all’Ucraina</h3>
+                                </div>
+                            </article>
+                            <article class="carousel-card"
+                                onclick="openModal('https\:\/\/www.vdj.it/ucraina-le-iniziative-organizzate-a-catania/')">
+                                <img
+                                    src="https://www.vdj.it/wp-content/uploads/2022/03/ucraina-catania-iniziative-pace-1536x1024.jpeg">
+                                <div class="card-body">
+                                    <h3>Ucraina / Le iniziative organizzate a Catania</h3>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="carousel-controls">
+                            <button onclick="prevSlide(1)">‹</button>
+                            <button onclick="nextSlide(1)">›</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="rubric">
+                    <h1>La Voce dell'innovazione</h1>
+                    <p><b>La Voce dell'Innovazione</b> è la rubrica de <i>La Voce dell'Jonio</i> dedicata alle ultime
+                        novità
+                        nel campo delle tecnologie e dell'innovazione. Un viaggio tra le scoperte scientifiche più
+                        recenti,
+                        le startup più promettenti e le storie di chi sta cambiando il mondo con le proprie idee.
+                        Un'occasione per esplorare le tendenze che stanno modellando il nostro futuro e per conoscere le
+                        menti brillanti dietro le innovazioni che trasformeranno la nostra società.</p>
+                    <div class="carousel">
+                        <div class="carousel-track" id="carouselTrack2">
+                            <article class="carousel-card"
+                                onclick="openModal('https\:\/\/www.vdj.it/hack-your-talent-2025-premiato-il-talento/')">
+                                <img src="https://www.vdj.it/wp-content/uploads/2025/02/hack-your-talent-2025.jpg">
+                                <div class="card-body">
+                                    <h3>Hack Your Talent 2025 / Maratona di ingegno e innovazione con 126 studenti</h3>
+                                </div>
+                            </article>
+                            <article class="carousel-card"
+                                onclick="openModal('https\:\/\/www.vdj.it/ragusa-oltre-300-candidature-per-hack-your-talent-2025/')">
+                                <img
+                                    src="https://www.vdj.it/wp-content/uploads/2025/02/hack-your-talent-2025-ragusa-1536x584.png">
+                                <div class="card-body">
+                                    <h3>Ragusa / Oltre 300 candidature per Hack Your Talent 2025</h3>
+                                </div>
+                            </article>
+                            <article class="carousel-card"
+                                onclick="openModal('https\:\/\/www.vdj.it/cybersecurity-direttiva-comunitaria-nis2-nuovo-standard-di-sicurezza-in-europa/')">
+                                <img
+                                    src="https://www.vdj.it/wp-content/uploads/2024/07/cybersecurity-direttiva-comunitaria-nis2-copertina-1068x601.jpg">
+                                <div class="card-body">
+                                    <h3>Cybersecurity / Direttiva comunitaria Nis2 e nuovi standard di sicurezza
+                                        richiesti in Europa</h3>
+                                </div>
+                            </article>
+                            <article class="carousel-card"
+                                onclick="openModal('https\:\/\/www.vdj.it/nuovo-supercomputer-a-raffreddamento-ad-acqua-del-cmcc-e-installato-da-ricca-it/')">
+                                <img
+                                    src="https://www.vdj.it/wp-content/uploads/2024/05/CMCC-supercomputer-Lenovo-Ricca-IT-768x352.png">
+                                <div class="card-body">
+                                    <h3>Nuovo supercomputer a raffreddamento ad acqua al CMCC installato da Ricca IT
+                                    </h3>
+                                </div>
+                            </article>
+                            <article class="carousel-card"
+                                onclick="openModal('https\:\/\/www.vdj.it/cybersicurezza-la-cruciale-importanza-del-dato-per-le-aziende-dellera-digitale/')">
+                                <img
+                                    src="https://www.vdj.it/wp-content/uploads/2024/04/cybersiurezza-dato-aziende-digitale-1536x1024.jpg">
+                                <div class="card-body">
+                                    <h3>Cybersicurezza / La cruciale importanza del dato per le aziende dell’era
+                                        digitale</h3>
+                                </div>
+                            </article>
+                            <article class="carousel-card"
+                                onclick="openModal('https\:\/\/www.vdj.it/ragusa-conclusa-con-oltre-100-partecipanti-la-terza-edizione-di-hack-your-talent/')">
+                                <img
+                                    src="https://www.vdj.it/wp-content/uploads/2024/02/hack-your-talent-ragusa-2024-1536x584.png">
+                                <div class="card-body">
+                                    <h3>Ragusa / Conclusa con oltre 100 partecipanti la terza edizione di Hack Your
+                                        Talent</h3>
+                                </div>
+                            </article>
+                            <article class="carousel-card"
+                                onclick="openModal('https\:\/\/www.vdj.it/futuro-solare-archimede-2-e-il-viaggio-per-la-sostenibilita-dalla-sicilia-allaustralia/')">
+                                <img
+                                    src="https://www.vdj.it/wp-content/uploads/2023/11/Archimede-2-Futuro-Solare-1068x1068.png">
+                                <div class="card-body">
+                                    <h3>Futuro Solare / Archimede 2 e la corsa per la sostenibilità dalla Sicilia
+                                        all’Australia</h3>
+                                </div>
+                            </article>
+                            <article class="carousel-card"
+                                onclick="openModal('https\:\/\/www.vdj.it/ponte-sullo-stretto-analisi-sugli-aspetti-geologici/')">
+                                <img
+                                    src="https://www.vdj.it/wp-content/uploads/2023/10/ponte-stretto-aspetti-geologici-messina-calabria-1536x1024.jpg">
+                                <div class="card-body">
+                                    <h3>Ponte sullo stretto / Analisi sugli aspetti geologici</h3>
+                                </div>
+                            </article>
+                            <article class="carousel-card"
+                                onclick="openModal('https\:\/\/www.vdj.it/ponte-sullo-stretto-progetto-messina-reggio-calabria/')">
+                                <img
+                                    src="https://www.vdj.it/wp-content/uploads/2023/10/ponte-stretto-messina-calabria-768x518.jpg">
+                                <div class="card-body">
+                                    <h3>Ponte sullo stretto / L’ora della svolta per un progetto da sogno tra Messina e
+                                        Reggio Calabria</h3>
+                                </div>
+                            </article>
+                            <article class="carousel-card"
+                                onclick="openModal('https\:\/\/www.vdj.it/podcast-un-successo-tra-la-genz-un-nuovo-modo-di-fare-audio/')">
+                                <img src="https://www.vdj.it/wp-content/uploads/2023/06/podcast-genz-audio-768x422.jpg">
+                                <div class="card-body">
+                                    <h3>Podcast / Successo tra la GenZ per un nuovo modo di fare audio</h3>
+                                </div>
+                            </article>
+                            <article class="carousel-card"
+                                onclick="openModal('https\:\/\/www.vdj.it/informatica-hack-your-talent-a-ragusa-successo-per-la-seconda-edizione/')">
+                                <img
+                                    src="https://www.vdj.it/wp-content/uploads/2023/03/ragusa-hack-your-talent-1536x1025.jpg">
+                                <div class="card-body">
+                                    <h3>Straordinario successo per la seconda edizione di Hack Your Talent Ragusa</h3>
+                                </div>
+                            </article>
+                            <article class="carousel-card"
+                                onclick="openModal('https\:\/\/www.vdj.it/ragusa-torna-il-secondo-hack-your-talent-per-gli-studenti/')">
+                                <img
+                                    src="https://www.vdj.it/wp-content/uploads/2023/01/hack-your-talent-ragusa-studenti-1536x1025.jpg">
+                                <div class="card-body">
+                                    <h3>Ragusa / Torna il secondo Hack your talent per gli studenti</h3>
+                                </div>
+                            </article>
+                            <article class="carousel-card"
+                                onclick="openModal('https\:\/\/www.vdj.it/scienza-la-scienziata-grassellino-coordinatrice-del-computer-quantico-piu-potente-della-storia/')">
+                                <img
+                                    src="https://www.vdj.it/wp-content/uploads/2022/08/scienziata-grassellino-computer-quantico-chicago-768x768.jpg">
+                                <div class="card-body">
+                                    <h3>Eccellenze / La scienziata Grassellino coordinatrice del computer quantico più
+                                        potente della storia</h3>
+                                </div>
+                            </article>
+                            <article class="carousel-card"
+                                onclick="openModal('https\:\/\/www.vdj.it/sanita-con-arethusa-un-nuovo-approccio-ai-tumori-metastatici-del-colon-retto/')">
+                                <img
+                                    src="https://www.vdj.it/wp-content/uploads/2022/07/arethusa-tumori-colon-retto-crisafulli-1536x1139.jpg">
+                                <div class="card-body">
+                                    <h3>Sanità / Con Arethusa un nuovo approccio ai tumori metastatici del colon-retto
+                                    </h3>
+                                </div>
+                            </article>
+                            <article class="carousel-card"
+                                onclick="openModal('https\:\/\/www.vdj.it/pnrr-sanita-in-sicilia-proposti-nuovi-modelli-a-favore-dell-innovazione/')">
+                                <img src="https://www.vdj.it/wp-content/uploads/2022/07/Sanita-768x512.jpg">
+                                <div class="card-body">
+                                    <h3>PNRR / Sanità, in Sicilia nuovi modelli a favore dell’innovazione</h3>
+                                </div>
+                            </article>
+                            <article class="carousel-card"
+                                onclick="openModal('https\:\/\/www.vdj.it/servizi-online-agid-cose-lo-spid/')">
+                                <img
+                                    src="https://www.vdj.it/wp-content/uploads/2021/12/servizi-online-spid-app-455x420.jpg">
+                                <div class="card-body">
+                                    <h3>Servizi online / AgID: cos’è lo SPID?</h3>
+                                </div>
+                            </article>
+                            <article class="carousel-card"
+                                onclick="openModal('https\:\/\/www.vdj.it/tiktok-la-creativita-dei-video-che-conquistano-il-web/')">
+                                <img
+                                    src="https://www.vdj.it/wp-content/uploads/2021/07/TikTok-video-creativita-696x696.png">
+                                <div class="card-body">
+                                    <h3>TikTok / La creatività dei video che conquistano il web</h3>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="carousel-controls">
+                            <button onclick="prevSlide(2)">‹</button>
+                            <button onclick="nextSlide(2)">›</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="rubric">
+                    <h1>Terre di Aci</h1>
+                    <p>
+                        Una sezione dedicata al territorio acese e alle sue molteplici espressioni. Un racconto che
+                        attraversa storia, tradizioni e bellezze paesaggistiche, ma che pone attenzione anche alle
+                        iniziative, ai progetti e agli eventi che contribuiscono a valorizzare e rilanciare il
+                        territorio. Dalle opportunità di sviluppo locale alle realtà associative e istituzionali,
+                        passando per le eccellenze gastronomiche, i racconti delle comunità e le attrazioni culturali e
+                        turistiche che rendono unico ogni angolo delle <b>Terre di Aci</b>. Uno spazio pensato per
+                        restituire l’identità viva e in continua evoluzione di una terra ricca di storia, impegno e
+                        potenzialità.
+                    </p>
+                    <div class="carousel">
+                        <div class="carousel-track" id="carouselTrack3">
+                            <article class="carousel-card"
+                                onclick="openModal('https\:\/\/www.vdj.it/gal-terre-di-aci-le-eccellenze-di-sicilia-protagoniste-su-la7/')">
+                                <img
+                                    src="https://www.vdj.it/wp-content/uploads/2025/03/GAL-Terre-Aci-La7-1536x1152.png">
+                                <div class="card-body">
+                                    <h3>GAL Terre di Aci / Le eccellenze di Sicilia protagoniste su La7</h3>
+                                </div>
+                            </article>
+                            <article class="carousel-card"
+                                onclick="openModal('https\:\/\/www.vdj.it/living-lab-delle-aci-al-via-il-nuovo-sportello-di-ascolto-e-sostegno-psicologico-gratuito/')">
+                                <img
+                                    src="https://www.vdj.it/wp-content/uploads/2025/01/living-lab-sportello-ascolto-copertina-1536x1206.png">
+                                <div class="card-body">
+                                    <h3>Living Lab delle Aci / Al via il nuovo sportello di ascolto e sostegno
+                                        psicologico gratuito</h3>
+                                </div>
+                            </article>
+                            <article class="carousel-card"
+                                onclick="openModal('https\:\/\/www.vdj.it/tecnologia-gal-terre-di-aci-centri-facilitazione-digitale/')">
+                                <img
+                                    src="https://www.vdj.it/wp-content/uploads/2024/12/gal-aci-facilitazione-digitale-scaled.jpeg">
+                                <div class="card-body">
+                                    <h3>Tecnologia / Il GAL Terre di Aci ricerca figure e spazi per nuovi centri di
+                                        facilitazione digitale</h3>
+                                </div>
+                            </article>
+                            <article class="carousel-card"
+                                onclick="openModal('https\:\/\/www.vdj.it/living-lab-delle-aci-laboratorio-per-l-agricoltura-4-0/')">
+                                <img
+                                    src="https://www.vdj.it/wp-content/uploads/2024/04/agricoltura-Living-Lab-Aci-1536x1086.jpeg">
+                                <div class="card-body">
+                                    <h3>Living Lab delle Aci / Via al Laboratorio per l’Agricoltura 4.0 tra esperti e
+                                        innovazione</h3>
+                                </div>
+                            </article>
+                            <article class="carousel-card"
+                                onclick="openModal('https\:\/\/www.vdj.it/gal-centri-di-facilitazione-digitale-territorio-delle-aci/')">
+                                <img
+                                    src="https://www.vdj.it/wp-content/uploads/2024/03/GAL-terre-di-Aci-centri-facilitazione-digitale-1536x1024.jpg">
+                                <div class="card-body">
+                                    <h3>GAL Terre di Aci / In cerca di partner e locali per 15 nuovi Centri di
+                                        Facilitazione Digitale</h3>
+                                </div>
+                            </article>
+                            <article class="carousel-card"
+                                onclick="openModal('https\:\/\/www.vdj.it/acireale-la-figura-di-don-lorenzo-milani-modello-per-la-scuola-giovanni-xxiii/')">
+                                <img
+                                    src="https://www.vdj.it/wp-content/uploads/2024/01/acireale-scuola-don-milani-1536x1152.jpeg">
+                                <div class="card-body">
+                                    <h3>Acireale / La figura di don Lorenzo Milani, modello per la scuola Giovanni XXIII
+                                    </h3>
+                                </div>
+                            </article>
+                            <article class="carousel-card"
+                                onclick="openModal('https\:\/\/www.vdj.it/living-lab-delle-aci-acireale-levento-conclusivo-inaugurazioni-patrocinato-dal-gal/')">
+                                <img
+                                    src="https://www.vdj.it/wp-content/uploads/2023/11/gal-living-lab-aci-inaugurazione.jpeg">
+                                <div class="card-body">
+                                    <h3>Living Lab delle Aci / Ad Acireale evento conclusivo di inaugurazioni e sintesi
+                                        promosso dal GAL</h3>
+                                </div>
+                            </article>
+                            <article class="carousel-card"
+                                onclick="openModal('https\:\/\/www.vdj.it/gal-terre-di-aci-proroga-bando-attivita-extra-agricole/')">
+                                <img
+                                    src="https://www.vdj.it/wp-content/uploads/2023/09/gal-aci-bando-proroga-1536x1024.jpg">
+                                <div class="card-body">
+                                    <h3>GAL Terre di Aci / Bando per attività extra agricole, 75% a fondo perduto</h3>
+                                </div>
+                            </article>
+                            <article class="carousel-card"
+                                onclick="openModal('https\:\/\/www.vdj.it/progetto-men-portale-lavoro-e-career-days-acireale/')">
+                                <img
+                                    src="https://www.vdj.it/wp-content/uploads/2023/09/MEN-portale-lavoro-Acireale-sito-1068x549.png">
+                                <div class="card-body">
+                                    <h3>Progetto MEN / Attivi il portale dedicato al lavoro e le iscrizioni ai Career
+                                        Days ad Acireale</h3>
+                                </div>
+                            </article>
+                            <article class="carousel-card"
+                                onclick="openModal('https\:\/\/www.vdj.it/acireale-lappello-di-carapaci-per-la-tutela-e-valorizzazione-della-timpa/')">
+                                <img
+                                    src="https://www.vdj.it/wp-content/uploads/2023/07/carapaci-appello-timpa-acireale-1536x1152.jpg">
+                                <div class="card-body">
+                                    <h3>Acireale / L’appello di CarapAci per la tutela e valorizzazione della Timpa</h3>
+                                </div>
+                            </article>
+                            <article class="carousel-card"
+                                onclick="openModal('https\:\/\/www.vdj.it/gal-terre-di-aci-roberto-barbagallo-eletto-presidente-del-nuovo-cda/')">
+                                <img
+                                    src="https://www.vdj.it/wp-content/uploads/2023/07/gal-aci-barbagallo-presidente-696x522.jpg">
+                                <div class="card-body">
+                                    <h3>GAL Terre di Aci / Roberto Barbagallo eletto presidente del nuovo CDA</h3>
+                                </div>
+                            </article>
+                            <article class="carousel-card"
+                                onclick="openModal('https\:\/\/www.vdj.it/gal-terre-di-aci-dimissioni-stefano-ali-il-saluto-ai-nuovi-sindaci/')">
+                                <img
+                                    src="https://www.vdj.it/wp-content/uploads/2023/06/GAL-Aci-Ali-sindaci-600x450.jpeg">
+                                <div class="card-body">
+                                    <h3>GAL Terre di Aci / Dimissioni Stefano Alì: il saluto ai nuovi sindaci</h3>
+                                </div>
+                            </article>
+                            <article class="carousel-card"
+                                onclick="openModal('https\:\/\/www.vdj.it/gal-terre-di-aci-bando-per-imprese-extra-agricole-e-turismo/')">
+                                <img
+                                    src="https://www.vdj.it/wp-content/uploads/2023/05/gal-aci-imprese-turismo-agricoltura-768x576.jpg">
+                                <div class="card-body">
+                                    <h3>GAL Terre di Aci / Bando per imprese extra agricole e turismo</h3>
+                                </div>
+                            </article>
+                            <article class="carousel-card"
+                                onclick="openModal('https\:\/\/www.vdj.it/gal-terre-di-aci-rendiconti-e-progetti-eccellenti-plauso-del-dipartimento-agricoltura/')">
+                                <img
+                                    src="https://www.vdj.it/wp-content/uploads/2023/05/Team-Gal-Terre-di-Aci-dipartimento-agricoltura-768x592.jpeg">
+                                <div class="card-body">
+                                    <h3>Gal Terre di Aci / Rendiconti e progetti eccellenti, plauso del Dipartimento
+                                        Agricoltura</h3>
+                                </div>
+                            </article>
+                            <article class="carousel-card"
+                                onclick="openModal('https\:\/\/www.vdj.it/gal-terre-di-aci-presidente-stefano-ali-a-fine-mandato-bilancio-lusinghiero/')">
+                                <img
+                                    src="https://www.vdj.it/wp-content/uploads/2023/05/Gal-aci-ali-bilancio-1536x1152.jpg">
+                                <div class="card-body">
+                                    <h3>Gal Terre di Aci / Presidente Stefano Alì a fine mandato: “bilancio lusinghiero”
+                                    </h3>
+                                </div>
+                            </article>
+                            <article class="carousel-card"
+                                onclick="openModal('https\:\/\/www.vdj.it/acireale-gal-la-via-dei-mulini-nella-valle-delle-aci/')">
+                                <img
+                                    src="https://www.vdj.it/wp-content/uploads/2022/10/percorso-mulini-Aci-Catena-768x720.jpg">
+                                <div class="card-body">
+                                    <h3>Acireale / Il 20 dicembre il seminario organizzato dal GAL sulla via dei mulini
+                                        nella valle delle Aci</h3>
+                                </div>
+                            </article>
+                            <article class="carousel-card"
+                                onclick="openModal('https\:\/\/www.vdj.it/progetto-hortnet-il-16-dicembre-il-convegno-sui-buoni-frutti-del-progetto-creaci/')">
+                                <img
+                                    src="https://www.vdj.it/wp-content/uploads/2022/12/progetto-HortNet-buoni-frutti.jpeg">
+                                <div class="card-body">
+                                    <h3>Progetto HortNet / Il 16 dicembre il convegno sui “buoni frutti del progetto
+                                        CreAci”</h3>
+                                </div>
+                            </article>
+                            <article class="carousel-card"
+                                onclick="openModal('https\:\/\/www.vdj.it/progetto-hortnet-ad-acireale-seminario-su-educazione-ambientale-e-alimentare/')">
+                                <img
+                                    src="https://www.vdj.it/wp-content/uploads/2022/11/progetto-HortNet-Acireale-seminario-670x420.jpeg">
+                                <div class="card-body">
+                                    <h3>Progetto HortNet / Ad Acireale, seminario su educazione ambientale e alimentare
+                                    </h3>
+                                </div>
+                            </article>
+                            <article class="carousel-card"
+                                onclick="openModal('https\:\/\/www.vdj.it/acireale-primo-convegno-del-consorzio-limone-dell-etna-igp-il-22-ottobre/')">
+                                <img src="https://www.vdj.it/wp-content/uploads/2022/10/Limone-dellEtna.jpg">
+                                <div class="card-body">
+                                    <h3>Acireale / Primo convegno del Consorzio Limone dell’Etna IGP il 22 ottobre</h3>
+                                </div>
+                            </article>
+                            <article class="carousel-card"
+                                onclick="openModal('https\:\/\/www.vdj.it/gal-terre-di-aci-il-1-ottobre-incontro-sulle-prospettive-del-turismo-di-prossimita/')">
+                                <img src="https://www.vdj.it/wp-content/uploads/2022/09/Gal-Terre-di-Aci.jpg">
+                                <div class="card-body">
+                                    <h3>Gal Terre di Aci / Il 1° ottobre incontro sulle prospettive del turismo di
+                                        prossimità</h3>
+                                </div>
+                            </article>
+                            <article class="carousel-card"
+                                onclick="openModal('https\:\/\/www.vdj.it/gal-terre-di-aci-approvate-risorse-aggiuntive-per-2-366-000-euro/')">
+                                <img
+                                    src="https://www.vdj.it/wp-content/uploads/2022/08/gal-aci-risorse-aggiuntive-768x480.jpg">
+                                <div class="card-body">
+                                    <h3>GAL Terre di Aci / Approvate risorse aggiuntive per 2.366.000 euro</h3>
+                                </div>
+                            </article>
+                            <article class="carousel-card"
+                                onclick="openModal('https\:\/\/www.vdj.it/gal-terre-di-aci-progetto-hortnet-candidato-a-premio-rural-inspiration-awards/')">
+                                <img
+                                    src="https://www.vdj.it/wp-content/uploads/2022/08/GAL-Rural-Inspiration-Awards.png">
+                                <div class="card-body">
+                                    <h3>GAL Terre di Aci / Progetto HortNet candidato a Premio Rural Inspiration Awards
+                                    </h3>
+                                </div>
+                            </article>
+                            <article class="carousel-card"
+                                onclick="openModal('https\:\/\/www.vdj.it/sport-premi-e-nuovo-portale-nasce-sicilia-calcio-giovani/')">
+                                <img src="https://www.vdj.it/wp-content/uploads/2022/07/sicilia-calcio-giovani.jpg">
+                                <div class="card-body">
+                                    <h3>Sport / Premi e nuovo portale, nasce Sicilia Calcio Giovani</h3>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="carousel-controls">
+                            <button onclick="prevSlide(3)">‹</button>
+                            <button onclick="nextSlide(3)">›</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="rubric">
+                    <h1>La Voce dell'Ambiente</h1>
+                    <p><b>La Voce dell'Ambiente</b> è la rubrica de <i>La Voce dell'Jonio</i> dedicata alle tematiche
+                        ambientali e alla sostenibilità. Un punto di riferimento per chi vuole restare informato sulle
+                        sfide ecologiche del nostro tempo, le iniziative green, le soluzioni innovative per la
+                        salvaguardia del pianeta e le storie di chi si impegna quotidianamente per un futuro più
+                        sostenibile. Un'occasione per riflettere sull'impatto delle nostre azioni e per scoprire come
+                        contribuire a proteggere e valorizzare l'ambiente che ci circonda.</p>
+                    <div class="carousel">
+                        <div class="carousel-track" id="carouselTrack4">
+                            <article class="carousel-card"
+                                onclick="openModal('https\:\/\/www.vdj.it/gestione-rifiuti-dibattito-aperto-con-l-assemblea-cittadina-organizzata-da-rete-sicilia-pulita-a-catania/')">
+                                <img
+                                    src="https://www.vdj.it/wp-content/uploads/2024/12/gestione-rifiuti-assemblea-cittadina-sicilia-1068x712.jpg">
+                                <div class="card-body">
+                                    <h3>Gestione rifiuti / Dibattito aperto con l’assemblea cittadina organizzata da
+                                        Rete Sicilia Pulita a Catania</h3>
+                                </div>
+                            </article>
+                            <article class="carousel-card"
+                                onclick="openModal('https\:\/\/www.vdj.it/modica-il-virtuoso-riconoscimento-di-comune-plastic-free/')">
+                                <img
+                                    src="https://www.vdj.it/wp-content/uploads/2022/05/modica-comune-plastic-free-768x576.jpeg">
+                                <div class="card-body">
+                                    <h3>Modica / Il virtuoso riconoscimento di comune Plastic Free</h3>
+                                </div>
+                            </article>
+                            <article class="carousel-card"
+                                onclick="openModal('https\:\/\/www.vdj.it/plastic-free-un-appello-per-il-bene-del-pianeta/')">
+                                <img
+                                    src="https://www.vdj.it/wp-content/uploads/2022/03/plastic-free-appello-pianeta-spiaggia-1536x864.jpg">
+                                <div class="card-body">
+                                    <h3>Plastic Free / Un appello per il bene del pianeta</h3>
+                                </div>
+                            </article>
+                            <article class="carousel-card"
+                                onclick="openModal('https\:\/\/www.vdj.it/plastic-free-a-catania-il-primo-evento-di-piantumazione/')">
+                                <img
+                                    src="https://www.vdj.it/wp-content/uploads/2021/12/plastic-free-piantumazione-catania-onlus-1-600x600.jpg">
+                                <div class="card-body">
+                                    <h3>Plastic Free / A Catania il primo evento di piantumazione</h3>
+                                </div>
+                            </article>
+                            <article class="carousel-card"
+                                onclick="openModal('https\:\/\/www.vdj.it/emergenza-rifiuti-catania-al-via-la-differenziata/')">
+                                <img
+                                    src="https://www.vdj.it/wp-content/uploads/2021/11/emergenza-rifiuti-differenziata-catania-1068x784.jpg">
+                                <div class="card-body">
+                                    <h3>Emergenza rifiuti / Catania: al via la differenziata</h3>
+                                </div>
+                            </article>
+                            <article class="carousel-card"
+                                onclick="openModal('https\:\/\/www.vdj.it/plastic-free-raccolte-nonostante-il-maltempo/')">
+                                <img
+                                    src="https://www.vdj.it/wp-content/uploads/2021/11/plastic-free-catania-maltempo-volontari-1068x802.jpg">
+                                <div class="card-body">
+                                    <h3>Plastic Free / Raccolte nonostante il maltempo</h3>
+                                </div>
+                            </article>
+                            <article class="carousel-card"
+                                onclick="openModal('https\:\/\/www.vdj.it/medicane-la-sicilia-jonica-in-ginocchio/')">
+                                <img
+                                    src="https://www.vdj.it/wp-content/uploads/2021/10/medicane-sicilia-jonica-catania-768x768.jpg">
+                                <div class="card-body">
+                                    <h3>Medicane / La Sicilia jonica in ginocchio</h3>
+                                </div>
+                            </article>
+                            <article class="carousel-card"
+                                onclick="openModal('https\:\/\/www.vdj.it/sicula-trasporti-situazione-critica-alla-discarica-di-lentini/')">
+                                <img
+                                    src="https://www.vdj.it/wp-content/uploads/2021/10/discarica-lentini-sicula-trasporti-rifiuti-768x576.jpg">
+                                <div class="card-body">
+                                    <h3>Sicula trasporti / Situazione critica alla discarica di Lentini</h3>
+                                </div>
+                            </article>
+                            <article class="carousel-card"
+                                onclick="openModal('https\:\/\/www.vdj.it/plastic-free-onlus-per-un-pianeta-libero-dalla-plastica/')">
+                                <img
+                                    src="https://www.vdj.it/wp-content/uploads/2021/09/plastic-free-pianeta-raccolta-1068x712.jpeg">
+                                <div class="card-body">
+                                    <h3>Plastic Free Onlus / Per un pianeta libero dalla plastica</h3>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="carousel-controls">
+                            <button onclick="prevSlide(4)">‹</button>
+                            <button onclick="nextSlide(4)">›</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="rubric">
+                    <h1>Economia e management</h1>
+                    <p>Una sezione dedicata a modelli virtuosi di managerialità e gli ultimi aggiornamenti economici.
+                        Scoprirete storie di successo, strategie innovative e consigli pratici per eccellere nel mondo
+                        del business. Un'occasione per rimanere informati sulle tendenze economiche e ispirarsi con
+                        esempi di leadership e management efficaci.</p>
+                    <div class="carousel">
+                        <div class="carousel-track" id="carouselTrack5">
+                            <article class="carousel-card"
+                                onclick="openModal('https\:\/\/www.vdj.it/catania-presentata-myfunds-app-per-conoscere-i-bandi-di-finanza-agevolata/')">
+                                <img
+                                    src="https://www.vdj.it/wp-content/uploads/2024/02/Catania-MyFunds-App-bandi-1068x580.jpg">
+                                <div class="card-body">
+                                    <h3>Catania / Presentata MyFunds App per conoscere i bandi di Finanza Agevolata</h3>
+                                </div>
+                            </article>
+                            <article class="carousel-card"
+                                onclick="openModal('https\:\/\/www.vdj.it/ragusa-sindaco-cassi-inaugurazione-ricca-it/')">
+                                <img src="https://www.vdj.it/wp-content/uploads/2023/11/Peppe-Cassi-sindaco-Ragusa.jpg">
+                                <div class="card-body">
+                                    <h3>Impresa / Il sindaco Cassì all’inaugurazione Ricca IT: “a Ragusa opportunità,
+                                        qualità della vita e nuovi corsi di laurea”</h3>
+                                </div>
+                            </article>
+                            <article class="carousel-card"
+                                onclick="openModal('https\:\/\/www.vdj.it/ragusa-inaugurazione-ricca-it-stefano-ricca/')">
+                                <img
+                                    src="https://www.vdj.it/wp-content/uploads/2023/11/Stefano-Ricca-IT-25-anni-scaled.jpg">
+                                <div class="card-body">
+                                    <h3>Stefano Ricca sui 25 anni di Ricca IT: “La competenza, nostra forza
+                                        differenziante”</h3>
+                                </div>
+                            </article>
+                            <article class="carousel-card"
+                                onclick="openModal('https\:\/\/www.vdj.it/ragusa-inaugurazione-ricca-it-con-ibm-21-anni-di-storia-allinsegna-della-generativita/')">
+                                <img
+                                    src="https://www.vdj.it/wp-content/uploads/2023/11/ragusa-inaugurazione-ricca-it-agora-1068x801.jpg">
+                                <div class="card-body">
+                                    <h3>Ragusa / Inaugurazione Ricca IT: “Con IBM 21 anni di storia all’insegna della
+                                        generatività”</h3>
+                                </div>
+                            </article>
+                            <article class="carousel-card"
+                                onclick="openModal('https\:\/\/www.vdj.it/altroconsumo-inchiesta-su-12-siti-per-la-spesa-online-poca-trasparenza/')">
+                                <img
+                                    src="https://www.vdj.it/wp-content/uploads/2023/10/altroconsumo-inchiesta-spesa-online-696x464.jpg">
+                                <div class="card-body">
+                                    <h3>Altroconsumo / Inchiesta su 12 siti per la spesa online: poca trasparenza</h3>
+                                </div>
+                            </article>
+                            <article class="carousel-card"
+                                onclick="openModal('https\:\/\/www.vdj.it/hq-holding-gianfranco-castro-e-il-nuovo-direttore-generale-di-gruppo/')">
+                                <img src="https://www.vdj.it/wp-content/uploads/2023/10/Gianfranco-Castro-Manager.jpeg">
+                                <div class="card-body">
+                                    <h3>HQ Holding / Gianfranco Castro è il nuovo direttore generale di gruppo</h3>
+                                </div>
+                            </article>
+                            <article class="carousel-card"
+                                onclick="openModal('https\:\/\/www.vdj.it/lavoro-cresce-a-ragusa-il-modello-ricca-it/')">
+                                <img
+                                    src="https://www.vdj.it/wp-content/uploads/2023/10/lavoro-ragusa-Ricca-IT-persone-facciata-696x464.jpg">
+                                <div class="card-body">
+                                    <h3>Lavoro / Cresce da Ragusa il modello Ricca IT: da 15 a 90 dipendenti in 6 anni
+                                    </h3>
+                                </div>
+                            </article>
+                            <article class="carousel-card"
+                                onclick="openModal('https\:\/\/www.vdj.it/ragusani-nel-mondo-veronica-diquattro-esempio-virtuoso-di-managerialita-femminile/')">
+                                <img src="https://www.vdj.it/wp-content/uploads/2023/10/Veronica-Diquattro.jpg">
+                                <div class="card-body">
+                                    <h3>Ragusani nel mondo / Veronica Diquattro, esempio virtuoso di managerialità
+                                        femminile</h3>
+                                </div>
+                            </article>
+                            <article class="carousel-card"
+                                onclick="openModal('https\:\/\/www.vdj.it/ragusani-nel-mondo-a-stefano-ricca-il-premio-speciale-aziende-iblee-deccellenza/')">
+                                <img
+                                    src="https://www.vdj.it/wp-content/uploads/2023/08/ragusani-mondo-stefano-ricca-1068x1068.jpg">
+                                <div class="card-body">
+                                    <h3>Ragusani nel mondo / A Stefano Ricca il premio speciale “Aziende iblee
+                                        d’eccellenza”</h3>
+                                </div>
+                            </article>
+                            <article class="carousel-card"
+                                onclick="openModal('https\:\/\/www.vdj.it/ragusani-nel-mondo-un-premio-dedicato-a-storie-d-eccellenza/')">
+                                <img
+                                    src="https://www.vdj.it/wp-content/uploads/2023/06/ragusani-mondo-premio-768x768.jpg">
+                                <div class="card-body">
+                                    <h3>Ragusani nel mondo / I premiati tra storie d’eccellenza della 28° edizione</h3>
+                                </div>
+                            </article>
+                            <article class="carousel-card"
+                                onclick="openModal('https\:\/\/www.vdj.it/next-nuova-economia-per-tutti/')">
+                                <img
+                                    src="https://www.vdj.it/wp-content/uploads/2021/07/NeXt-nuova-economia-450x270.png">
+                                <div class="card-body">
+                                    <h3>NeXt / Nuova Economia per tutti</h3>
+                                </div>
+                            </article>
+                            <article class="carousel-card"
+                                onclick="openModal('https\:\/\/www.vdj.it/gioosto-e-commerce-e-shopping-sostenibile-firmato-next/')">
+                                <img
+                                    src="https://www.vdj.it/wp-content/uploads/2021/07/Gioosto-e-commerce-sostenibile-600x338.png">
+                                <div class="card-body">
+                                    <h3>Gioosto / E-commerce e shopping sostenibile firmato NeXt</h3>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="carousel-controls">
+                            <button onclick="prevSlide(5)">‹</button>
+                            <button onclick="nextSlide(5)">›</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="rubric">
+                    <h1>Cultura ed eventi</h1>
+                    <p>Uno spazio dedicato al mondo culturale e agli appuntamenti imperdibili. Un viaggio attraverso le
+                        arti, le tradizioni e le manifestazioni che animano il nostro territorio. Dalle mostre ai
+                        concerti,
+                        dai festival letterari agli spettacoli teatrali, scoprirete tutte le novità e le curiosità del
+                        panorama culturale locale e oltre. Un'occasione per rimanere sempre aggiornati e vivere appieno
+                        l'effervescenza culturale che ci circonda.</p>
+                    <div class="carousel">
+                        <div class="carousel-track" id="carouselTrack6">
+                            <article class="carousel-card"
+                                onclick="openModal('https\:\/\/www.vdj.it/ragusa-foto-festival-2024-al-via-la-dodicesima-edizione-prendersi-una-pausa/')">
+                                <img
+                                    src="https://www.vdj.it/wp-content/uploads/2024/08/ragusa-foto-festival-2024-1536x1034.jpg">
+                                <div class="card-body">
+                                    <h3>Ragusa Foto Festival 2024 / Al via la dodicesima edizione “Prendersi una pausa”
+                                    </h3>
+                                </div>
+                            </article>
+                            <article class="carousel-card"
+                                onclick="openModal('https\:\/\/www.vdj.it/anniversario-giorgio-la-pira-120-anni-dalla-nascita-del-sindaco-santo/')">
+                                <img
+                                    src="https://www.vdj.it/wp-content/uploads/2024/01/120-anniversario-la-pira-pozzallo-1536x826.jpg">
+                                <div class="card-body">
+                                    <h3>Anniversario / Giorgio La Pira: 120 anni dalla nascita del sindaco santo</h3>
+                                </div>
+                            </article>
+                            <article class="carousel-card"
+                                onclick="openModal('https\:\/\/www.vdj.it/modica-istituto-carlo-amore-biblioteca-dei-piccini/')">
+                                <img
+                                    src="https://www.vdj.it/wp-content/uploads/2023/12/istituto-carlo-amore-modica-biblioteca-1536x864.jpg">
+                                <div class="card-body">
+                                    <h3>Modica / L’Istituto Carlo Amore inaugura la “Biblioteca dei piccini”</h3>
+                                </div>
+                            </article>
+                            <article class="carousel-card"
+                                onclick="openModal('https\:\/\/www.vdj.it/siracusa-nuovo-bookstore-mondadori-per-promuovere-incontri-in-centro-storico/')">
+                                <img
+                                    src="https://www.vdj.it/wp-content/uploads/2023/10/Siracusa-nuovo-Bookstore-in-centro.jpg">
+                                <div class="card-body">
+                                    <h3>Siracusa / Nuovo bookstore Mondadori per promuovere incontri in centro storico
+                                    </h3>
+                                </div>
+                            </article>
+                            <article class="carousel-card"
+                                onclick="openModal('https\:\/\/www.vdj.it/libro-la-cura-migliore-di-franco-cosmi-e-rosario-brischetto/')">
+                                <img
+                                    src="https://www.vdj.it/wp-content/uploads/2023/07/libro-cosmi-brischetto-medico-paziente-1536x1024.jpg">
+                                <div class="card-body">
+                                    <h3>Libro / “La cura migliore” di Franco Cosmi e Rosario Brischetto</h3>
+                                </div>
+                            </article>
+                            <article class="carousel-card"
+                                onclick="openModal('https\:\/\/www.vdj.it/politica-in-senato-presentato-del-volume-giorgio-la-pira-i-capitoli-di-una-vita/')">
+                                <img
+                                    src="https://www.vdj.it/wp-content/uploads/2022/12/Giorgio-La-Pira-volume-Senato-1068x601.jpg">
+                                <div class="card-body">
+                                    <h3>Politica / In Senato presentato il volume “Giorgio La Pira: i capitoli di una
+                                        vita”</h3>
+                                </div>
+                            </article>
+                            <article class="carousel-card"
+                                onclick="openModal('https\:\/\/www.vdj.it/eventi-culturali-torna-nella-seconda-edizione-il-caltagirone-film-festival/')">
+                                <img
+                                    src="https://www.vdj.it/wp-content/uploads/2022/07/caltagirone-film-festival-scaled.jpeg">
+                                <div class="card-body">
+                                    <h3>Eventi culturali / Torna la seconda edizione del Caltagirone Film Festival</h3>
+                                </div>
+                            </article>
+                            <article class="carousel-card"
+                                onclick="openModal('https\:\/\/www.vdj.it/scuola-la-lettera-della-maestra-bonaccorsi-agli-alunni/')">
+                                <img
+                                    src="https://www.vdj.it/wp-content/uploads/2021/12/maestra-anna-bonaccorsi-pensione-lettera-1536x1028.jpg">
+                                <div class="card-body">
+                                    <h3>Santa Venerina / La lettera della maestra Bonaccorsi agli alunni</h3>
+                                </div>
+                            </article>
+                            <article class="carousel-card"
+                                onclick="openModal('https\:\/\/www.vdj.it/catania-centro-teatrale-universitario-machiavelli-cut/')">
+                                <img
+                                    src="https://www.vdj.it/wp-content/uploads/2021/10/catania-machiavelli-cut-unict.jpg">
+                                <div class="card-body">
+                                    <h3>Catania / Il Centro Teatrale Universitario Machiavelli CUT</h3>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="carousel-controls">
+                            <button onclick="prevSlide(6)">‹</button>
+                            <button onclick="nextSlide(6)">›</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="rubric">
+                    <h1>Religione e spiritualità</h1>
+                    <p></p>
+                    <div class="carousel">
+                        <div class="carousel-track" id="carouselTrack7">
+                            <article class="carousel-card"
+                                onclick="openModal('https\:\/\/www.vdj.it/maria-che-scioglie-i-nodi-la-devozione-mariana-papa-francesco/')">
+                                <img
+                                    src="https://www.vdj.it/wp-content/uploads/2025/05/maria-che-scioglie-i-nodi-papa-francesco-1536x1152.png">
+                                <div class="card-body">
+                                    <h3>Maria che scioglie i nodi / La devozione mariana cara a Papa Francesco</h3>
+                                </div>
+                            </article>
+                            <article class="carousel-card"
+                                onclick="openModal('https\:\/\/www.vdj.it/cei-acireale-tra-le-diocesi-protagoniste-della-nuova-campagna-uniti-nel-dono/')">
+                                <img
+                                    src="https://www.vdj.it/wp-content/uploads/2025/01/cei-acireale-diocesi-campagna.jpg">
+                                <div class="card-body">
+                                    <h3>CEI / Acireale tra le diocesi protagoniste della nuova campagna “Uniti nel dono”
+                                    </h3>
+                                </div>
+                            </article>
+                            <article class="carousel-card"
+                                onclick="openModal('https\:\/\/www.vdj.it/giubileo-papa-francesco-giovani-pellegrini-speranza/')">
+                                <img
+                                    src="https://www.vdj.it/wp-content/uploads/2024/10/giubileo-papa-francesco-giovani-696x453.jpg">
+                                <div class="card-body">
+                                    <h3>Verso il Giubileo 2025 / Papa Francesco ai giovani: “Siate pellegrini, non
+                                        turisti della vita”</h3>
+                                </div>
+                            </article>
+                            <article class="carousel-card"
+                                onclick="openModal('https\:\/\/www.vdj.it/verso-il-giubileo-pellegrini-di-speranza-papa-francesco/')">
+                                <img
+                                    src="https://www.vdj.it/wp-content/uploads/2024/09/giubileo-pellegrini-speranza-papa-francesco-768x512.jpeg">
+                                <div class="card-body">
+                                    <h3>Verso il Giubileo 2025 / Istruzioni per Pellegrini di speranza nel cammino con
+                                        Papa Francesco</h3>
+                                </div>
+                            </article>
+                            <article class="carousel-card"
+                                onclick="openModal('https\:\/\/www.vdj.it/cei-la-nuova-app-bibbia-un-viaggio-interattivo-nella-sacra-scrittura/')">
+                                <img src="https://www.vdj.it/wp-content/uploads/2023/11/cei-app-bibbia-696x290.png">
+                                <div class="card-body">
+                                    <h3>CEI / La nuova App Bibbia: un viaggio interattivo nella Sacra Scrittura</h3>
+                                </div>
+                            </article>
+                            <article class="carousel-card"
+                                onclick="openModal('https\:\/\/www.vdj.it/corallo-tv-domenica-10-dicembre-lo-speciale-pace-in-terra-dallitalia-e-dal-mondo/')">
+                                <img
+                                    src="https://www.vdj.it/wp-content/uploads/2023/12/corallo-tv-speciale-pace-696x436.jpg">
+                                <div class="card-body">
+                                    <h3>Corallo TV / Domenica 10 dicembre lo speciale “Pace in terra. Dall’Italia e dal
+                                        mondo”</h3>
+                                </div>
+                            </article>
+                            <article class="carousel-card"
+                                onclick="openModal('https\:\/\/www.vdj.it/diocesi-domani-sera-a-riposto-la-veglia-di-tutti-i-santi/')">
+                                <img
+                                    src="https://www.vdj.it/wp-content/uploads/2022/10/Veglia-di-tutti-i-santi-2022-1068x561.jpg">
+                                <div class="card-body">
+                                    <h3>Diocesi / Domani sera a Riposto la veglia di Tutti i Santi</h3>
+                                </div>
+                            </article>
+                            <article class="carousel-card"
+                                onclick="openModal('https\:\/\/www.vdj.it/uniti-nel-dono-18-settembre-dedicato-all-8xmille-per-i-sacerdoti/')">
+                                <img
+                                    src="https://www.vdj.it/wp-content/uploads/2022/09/uniti-nel-dono-Giornata-8xmille-1536x1355.jpg">
+                                <div class="card-body">
+                                    <h3>Uniti nel dono / 18 settembre dedicato all’ 8xmille per i sacerdoti</h3>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="carousel-controls">
+                            <button onclick="prevSlide(7)">‹</button>
+                            <button onclick="nextSlide(7)">›</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="container">
+                <div class="rubric">
+                    <h1>News e attualità</h1>
+                    <p>Le notizie più fresche e una varietà di argomenti di interesse generale. Qui troverete
+                        aggiornamenti
+                        quotidiani su cronaca, politica, società, e tutto ciò che accade intorno a noi. Oltre alle
+                        notizie,
+                        la sezione ospita approfondimenti, curiosità e storie che vanno oltre i titoli principali.</p>
+                    <div class="carousel">
+                        <div class="carousel-track" id="carouselTrack8">
+                            <article class="carousel-card"
+                                onclick="openModal('https\:\/\/www.vdj.it/referendum-cittadini-alle-urne-8-e-9-giugno-guida-al-voto/')">
+                                <img
+                                    src="https://www.vdj.it/wp-content/uploads/2025/05/referendum-8-9-giugno-1536x1152.jpg">
+                                <div class="card-body">
+                                    <h3>Referendum / Cittadini alle urne 8 e 9 giugno: guida al voto</h3>
+                                </div>
+                            </article>
+                            <article class="carousel-card"
+                                onclick="openModal('https\:\/\/www.vdj.it/sicilia-express-torna-a-pasqua-2025-il-treno-dei-fuorisede/')">
+                                <img
+                                    src="https://www.vdj.it/wp-content/uploads/2025/03/Sicilia-Express-pasqua-forisede.jpg">
+                                <div class="card-body">
+                                    <h3>Sicilia Express / Torna a Pasqua 2025 il treno dei fuorisede</h3>
+                                </div>
+                            </article>
+                            <article class="carousel-card"
+                                onclick="openModal('https\:\/\/www.vdj.it/palermo-la-casa-di-giulio-lotta-contro-il-crack-e-dipendenza/')">
+                                <img
+                                    src="https://www.vdj.it/wp-content/uploads/2024/12/palermo-casa-giulio-crack-dipendenza-1536x1152.jpg">
+                                <div class="card-body">
+                                    <h3>Palermo / La Casa di Giulio, faro di speranza contro il crack e la dipendenza
+                                    </h3>
+                                </div>
+                            </article>
+                            <article class="carousel-card"
+                                onclick="openModal('https\:\/\/www.vdj.it/sicilia-express-il-treno-di-natale-per-i-siciliani-fuorisede/')">
+                                <img
+                                    src="https://www.vdj.it/wp-content/uploads/2024/12/sicilia-express-fuorisede-natale-treno-1068x709.jpg">
+                                <div class="card-body">
+                                    <h3>Sicilia Express / Il treno di Natale per i siciliani fuorisede</h3>
+                                </div>
+                            </article>
+                            <article class="carousel-card"
+                                onclick="openModal('https\:\/\/www.vdj.it/politica-quellurgente-appello-dei-cattolici-italiani-per-una-democrazia-partecipativa-e-sostanziale/')">
+                                <img
+                                    src="https://www.vdj.it/wp-content/uploads/2024/08/appello-democrazia-cattolici-italiani-1536x1024.jpeg">
+                                <div class="card-body">
+                                    <h3>Società / Quell’urgente appello dei cattolici italiani per una democrazia
+                                        partecipativa e sostanziale</h3>
+                                </div>
+                            </article>
+                            <article class="carousel-card"
+                                onclick="openModal('https\:\/\/www.vdj.it/covid-19-dal-mercato-di-wuhan-a-pandemia-globale/')">
+                                <img
+                                    src="https://www.vdj.it/wp-content/uploads/2022/12/covid-19-wuhan-pandemia-globale-origini-696x464.jpg">
+                                <div class="card-body">
+                                    <h3>Covid-19 / 3 anni di pandemia globale: dal mercato di Wuhan a oggi</h3>
+                                </div>
+                            </article>
+                            <article class="carousel-card"
+                                onclick="openModal('https\:\/\/www.vdj.it/elezioni-i-giovani-della-gen-z-per-la-prima-volta-al-voto/')">
+                                <img
+                                    src="https://www.vdj.it/wp-content/uploads/2022/09/elezioni-giovani-gen-z-1068x1068.png">
+                                <div class="card-body">
+                                    <h3>Elezioni / Domande e temi per giovani della Gen Z, per la prima volta al voto
+                                    </h3>
+                                </div>
+                            </article>
+                            <article class="carousel-card"
+                                onclick="openModal('https\:\/\/www.vdj.it/catania-inaugurata-piazza-scammacca-per-una-riqualificazione-urbana/')">
+                                <img
+                                    src="https://www.vdj.it/wp-content/uploads/2022/07/piazza-scammacca-riqualificazione-urbana-768x768.jpg">
+                                <div class="card-body">
+                                    <h3>Catania / Inaugurata Piazza Scammacca per una riqualificazione urbana</h3>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="carousel-controls">
+                            <button onclick="prevSlide(8)">‹</button>
+                            <button onclick="nextSlide(8)">›</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="rubric">
+                    <h1>Perle dell'Jonio</h1>
+                    <p> <b>Perle dell’Jonio</b> è la sezione de <i>La Voce dell’Jonio</i> dedicata alla scoperta dei
+                        luoghi più suggestivi e identitari del territorio jonico e non solo. Un percorso tra borghi,
+                        paesaggi naturali, coste, tradizioni e patrimoni culturali che raccontano l’anima autentica di
+                        questa terra. Uno spazio pensato per valorizzare bellezze spesso poco conosciute, promuovere il
+                        turismo consapevole e offrire uno sguardo approfondito sulle eccellenze locali, tra storia,
+                        natura e comunità. Un invito a conoscere, esplorare e riscoprire le perle che rendono unico il nostro territorio.</p>
+                    <section class="portfolio-section">
+                        <div class="map-container">
+                            <div id="map"></div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <div class="container">
+                <h1>Le nostre pagine social:</h1>
+                <p><b>Dal 2021</b> gestisco e curo la presenza social de <b>La Voce dell’Jonio</b>, occupandomi della
+                    valorizzazione dei contenuti editoriali, della promozione degli articoli
+                    e della costruzione di una narrazione coerente tra territorio, attualità
+                    e comunità digitale. Questo progetto mi ha permesso di sperimentare diversi aspetti del social media
+                    management: dalla programmazione dei post alla realizzazione di grafiche per <b>Instagram</b> (post
+                    e storie), dalla creazione di contenuti video per <b>TikTok</b> (poi dismesso) alla gestione delle
+                    pubblicazioni tramite <b>Meta Business Suite</b>, <b>LinkedIn</b> e <b>X</b> (ex Twitter), nonché,
+                    saltuariamente, la crezione di locandie per eventi (Canva). Inoltre, ho maturato esperienza
+                    nell’utilizzo di <b>WordPress</b> per il caricamento e l’ottimizzazione degli articoli.
+                </p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/LaVoceDelloJonio" target="_blank" aria-label="Facebook">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+                    <a href="https://x.com/LaVocedellJonio" target="_blank" aria-label="Twitter">
+                        <i class="bi bi-twitter-x"></i>
+                    </a>
+                    <a href="https://www.instagram.com/lavocedelljonio?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                        target="_blank" aria-label="Instagram">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/la-voce-dell-jonio-06395415b" target="_blank"
+                        aria-label="LinkedIn">
+                        <i class="bi bi-linkedin"></i>
+                    </a>
+                    <a href="https://t.me/lavocedelljonio" target="_blank" aria-label="Telegram">
+                        <i class="bi bi-telegram"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <section class="portfolio-section">
+            <div class="banner eate">
+                <div class="banner-text">
+                    <h2>Il mio lavoro per E a te:</h2>
+                </div>
+            </div>
+            <div class="container">
+                <div class="title eate">
+                    <h1 style="justify-self: center;">Giuro solennemente di non avere buone intenzioni:</h1>
+                </div>
+                <p>Blog a tema <b>Harry Potter</b>. Collaborazione su base volontaria nella scrittura e pubblicazione di
+                    articoli ottimizzati SEO su <b>WordPress</b> sotto lo pseudonimo di <i>Millicent Bulstrode</i> e
+                    nella realizzazione di grafiche e caroselli per i social con Canva.</p>
+                <div class="carousel" id="eateCarousel">
+                    <div class="carousel-track" id="carouselTrack9">
+                        <article class="carousel-card"
+                            onclick="openModal('https\:\/\/eateseseirimastoconharry.com/netflix-acquista-warner-bros/')">
+                            <img
+                                src="https://i0.wp.com/eateseseirimastoconharry.com/wp-content/uploads/2025/12/netflix-warner-bros.jpg?w=1600&ssl=1">
+                            <div class="card-body">
+                                <h3>Netflix acquisisce Warner Bros: ecco cosa sappiamo finora</h3>
+                            </div>
+                        </article>
+                        <article class="carousel-card"
+                            onclick="openModal('https\:\/\/eateseseirimastoconharry.com/la-magia-di-harry-potter-a-rovigo/')">
+                            <img
+                                src="https://i0.wp.com/eateseseirimastoconharry.com/wp-content/uploads/2025/12/harry-potter-rovigo-1.jpeg?w=1600&ssl=1">
+                            <div class="card-body">
+                                <h3>Magical Christmas Village: la magia di Harry Potter a Rovigo</h3>
+                            </div>
+                        </article>
+                        <article class="carousel-card"
+                            onclick="openModal('https\:\/\/eateseseirimastoconharry.com/lego-harry-potter-land-germania/')">
+                            <img
+                                src="https://i0.wp.com/eateseseirimastoconharry.com/wp-content/uploads/2025/12/lego-harry-potter-germania.png?w=1600&ssl=1">
+                            <div class="card-body">
+                                <h3>Arriva in Germania il primo LEGO Harry Potter Land del mondo</h3>
+                            </div>
+                        </article>
+                        <article class="carousel-card"
+                            onclick="openModal('https\:\/\/eateseseirimastoconharry.com/4-scene-dei-film-che-vorremmo-rivedere-nella-serie-tv-parte-2/')">
+                            <img
+                                src="https://i0.wp.com/eateseseirimastoconharry.com/wp-content/uploads/2024/05/coeprtina-film.jpg?w=1600&ssl=1">
+                            <div class="card-body">
+                                <h3>4 scene dei film che vorremmo rivedere nella serie TV – Parte 2</h3>
+                            </div>
+                        </article>
+                        <article class="carousel-card"
+                            onclick="openModal('https\:\/\/eateseseirimastoconharry.com/4-scene-dei-film-che-vorremmo-rivedere-nella-serie-tv/')">
+                            <img
+                                src="https://i0.wp.com/eateseseirimastoconharry.com/wp-content/uploads/2024/05/copertina.jpg?w=1600&ssl=1">
+                            <div class="card-body">
+                                <h3>4 scene dei film che vorremmo rivedere nella serie TV</h3>
+                            </div>
+                        </article>
+                        <article class="carousel-card"
+                            onclick="openModal('https\:\/\/eateseseirimastoconharry.com/pop-up-store-harry-potter-catania/')">
+                            <img
+                                src="https://i0.wp.com/eateseseirimastoconharry.com/wp-content/uploads/2025/10/pop-up-store-catania.jpg?w=1600&ssl=1">
+                            <div class="card-body">
+                                <h3>Apre a Catania il primo pop-up store d’Italia a tema Harry Potter</h3>
+                            </div>
+                        </article>
+                        <article class="carousel-card"
+                            onclick="openModal('https\:\/\/eateseseirimastoconharry.com/catania-la-magia-di-harry-potter-arriva-a-teatro-con-lo-spettacolo-il-sopravvissuto/')">
+                            <img
+                                src="https://i0.wp.com/eateseseirimastoconharry.com/wp-content/uploads/2025/10/harry-potter-teatro-catania-il-sopravvissuto-1.jpg?w=1600&ssl=1">
+                            <div class="card-body">
+                                <h3>Catania: Harry Potter a teatro con lo spettacolo “Il Sopravvissuto”</h3>
+                            </div>
+                        </article>
+                        <article class="carousel-card"
+                            onclick="openModal('https\:\/\/eateseseirimastoconharry.com/natale-anticipato-calendario-avvento-lego-harry-potter/')">
+                            <img
+                                src="https://i0.wp.com/eateseseirimastoconharry.com/wp-content/uploads/2025/08/calendario-lego-harry-potter.jpg?w=1600&ssl=1">
+                            <div class="card-body">
+                                <h3>Natale a Hogwarts: arriva il Calendario dell’Avvento LEGO Harry Potter 2025</h3>
+                            </div>
+                        </article>
+                        <article class="carousel-card"
+                            onclick="openModal('https\:\/\/eateseseirimastoconharry.com/il-fascino-delle-passaporte-guida-al-teletrasporto-nel-mondo-magico/')">
+                            <img
+                                src="https://i0.wp.com/eateseseirimastoconharry.com/wp-content/uploads/2024/07/passaporte-copertina.jpeg?w=1280&ssl=1">
+                            <div class="card-body">
+                                <h3>Il fascino delle passaporte: guida al teletrasporto nel mondo magico</h3>
+                            </div>
+                        </article>
+                        <article class="carousel-card"
+                            onclick="openModal('https\:\/\/eateseseirimastoconharry.com/harry-potter-serie-audio-4-novembre/')">
+                            <img
+                                src="https://i0.wp.com/eateseseirimastoconharry.com/wp-content/uploads/2025/08/harry-potter-audio.jpg?w=1600&ssl=1">
+                            <div class="card-body">
+                                <h3>Nuove voci per gli audiolibri di Harry Potter e ci sono due sorprese!</h3>
+                            </div>
+                        </article>
+                        <article class="carousel-card"
+                            onclick="openModal('https\:\/\/eateseseirimastoconharry.com/serie-tv-harry-potter-hbo-team-creativo/')">
+                            <img
+                                src="https://i0.wp.com/eateseseirimastoconharry.com/wp-content/uploads/2025/07/team-creativo-serie-tv-hbo.jpg?w=1600&ssl=1">
+                            <div class="card-body">
+                                <h3>Dietro le quinte della serie TV: chi sono i professionisti del team creativo</h3>
+                            </div>
+                        </article>
+                        <article class="carousel-card"
+                            onclick="openModal('https\:\/\/eateseseirimastoconharry.com/harry-potte-serie-tv-foto-dal-set-hbo/')">
+                            <img
+                                src="https://i0.wp.com/eateseseirimastoconharry.com/wp-content/uploads/2025/07/fot-set-hbo-serie-tv.jpg?w=1600&ssl=1">
+                            <div class="card-body">
+                                <h3>Harry e i Dursley allo zoo: fuori le prime foto dal set HBO</h3>
+                            </div>
+                        </article>
+                        <article class="carousel-card"
+                            onclick="openModal('https\:\/\/eateseseirimastoconharry.com/alastair-stout-chi-e-il-misterioso-ron-weasley-della-serie-hbo/')">
+                            <img
+                                src="https://i0.wp.com/eateseseirimastoconharry.com/wp-content/uploads/2025/06/alastair-stout.jpg?w=1600&ssl=1">
+                            <div class="card-body">
+                                <h3>Alastair Stout: chi è il misterioso Ron Weasley della serie HBO</h3>
+                            </div>
+                        </article>
+                        <article class="carousel-card"
+                            onclick="openModal('https\:\/\/eateseseirimastoconharry.com/dominic-mclaughlin-nuovo-harry-potter-hbo/')">
+                            <img
+                                src="https://i0.wp.com/eateseseirimastoconharry.com/wp-content/uploads/2025/05/Harry-Potter-Dominic-McLaughlin.jpg?w=1600&ssl=1">
+                            <div class="card-body">
+                                <h3>Dominic McLaughlin: cosa sappiamo del nuovo Harry Potter di HBO</h3>
+                            </div>
+                        </article>
+                        <article class="carousel-card"
+                            onclick="openModal('https\:\/\/eateseseirimastoconharry.com/arabella-stanton-hermione-granger-serie-tv/')">
+                            <img
+                                src="https://i0.wp.com/eateseseirimastoconharry.com/wp-content/uploads/2025/05/arabella-stanton-hermione-granger.jpg?w=1600&ssl=1">
+                            <div class="card-body">
+                                <h3>Arabella Stanton: ecco chi è la nuova Hermione di HBO</h3>
+                            </div>
+                        </article>
+                        <article class="carousel-card"
+                            onclick="openModal('https\:\/\/eateseseirimastoconharry.com/harry-potter-porte-di-catania/')">
+                            <img
+                                src="https://i0.wp.com/eateseseirimastoconharry.com/wp-content/uploads/2025/05/harry-potter-catania.jpg?w=1600&ssl=1">
+                            <div class="card-body">
+                                <h3>La magia di Harry Potter invade le Porte di Catania</h3>
+                            </div>
+                        </article>
+                        <article class="carousel-card"
+                            onclick="openModal('https\:\/\/eateseseirimastoconharry.com/evento-harry-potter-i-gigli-firenze/')">
+                            <img
+                                src="https://i0.wp.com/eateseseirimastoconharry.com/wp-content/uploads/2025/05/Firenze-Harry-Potter-copertina.jpg?w=1600&ssl=1">
+                            <div class="card-body">
+                                <h3>Harry Potter arriva a “I Gigli” e porta la magia a Firenze</h3>
+                            </div>
+                        </article>
+                        <article class="carousel-card"
+                            onclick="openModal('https\:\/\/eateseseirimastoconharry.com/etna-comics-2025-seamus-finnigan/')">
+                            <img
+                                src="https://i0.wp.com/eateseseirimastoconharry.com/wp-content/uploads/2025/04/etna-comics-seamus-finnigan.jpg?w=1600&ssl=1">
+                            <div class="card-body">
+                                <h3>Etna Comics 2025: Seamus Finnigan ospite speciale a Catania</h3>
+                            </div>
+                        </article>
+                        <article class="carousel-card"
+                            onclick="openModal('https\:\/\/eateseseirimastoconharry.com/thomas-taylor-comicon-napoli-copertina-harry-potter/')">
+                            <img
+                                src="https://i0.wp.com/eateseseirimastoconharry.com/wp-content/uploads/2025/03/Thomas-Taylor.jpg?w=1600&ssl=1">
+                            <div class="card-body">
+                                <h3>Il primo illustratore di Harry Potter in Italia: firmacopie al Comicon di Napoli
+                                </h3>
+                            </div>
+                        </article>
+                        <article class="carousel-card"
+                            onclick="openModal('https\:\/\/eateseseirimastoconharry.com/gregory-goyle-sara-ospite-alla-fiera-dei-maghi-in-sardegna/')">
+                            <img
+                                src="https://i0.wp.com/eateseseirimastoconharry.com/wp-content/uploads/2025/04/fiera-maghi-goyle-1.jpg?w=1600&ssl=1">
+                            <div class="card-body">
+                                <h3>Gregory Goyle sarà ospite alla Fiera dei Maghi in Sardegna</h3>
+                            </div>
+                        </article>
+                        <article class="carousel-card"
+                            onclick="openModal('https\:\/\/eateseseirimastoconharry.com/harry-potter-classici-letteratura-scuola/')">
+                            <img
+                                src="https://i0.wp.com/eateseseirimastoconharry.com/wp-content/uploads/2025/03/harry-potter-scuola.jpg?w=1600&ssl=1">
+                            <div class="card-body">
+                                <h3>Harry Potter approda tra i classici della letteratura da studiare a scuola</h3>
+                            </div>
+                        </article>
+                        <article class="carousel-card"
+                            onclick="openModal('https\:\/\/eateseseirimastoconharry.com/franchise-harry-potter-si-rinnova-jeffery-johnson/')">
+                            <img
+                                src="https://i0.wp.com/eateseseirimastoconharry.com/wp-content/uploads/2025/03/harry-potter-serie-tv.jpg?w=1601&ssl=1">
+                            <div class="card-body">
+                                <h3>Da Disney e Universal: i nuovi dirigenti del franchise di Harry Potter</h3>
+                            </div>
+                        </article>
+                        <article class="carousel-card"
+                            onclick="openModal('https\:\/\/eateseseirimastoconharry.com/evento-palermo-mark-williams-ospite-oblivion/')">
+                            <img
+                                src="https://i0.wp.com/eateseseirimastoconharry.com/wp-content/uploads/2025/02/mark-williams-italia.jpg?w=1600&ssl=1">
+                            <div class="card-body">
+                                <h3>Evento magico a Palermo: Mark Williams ospite all’Oblivion</h3>
+                            </div>
+                        </article>
+                        <article class="carousel-card"
+                            onclick="openModal('https\:\/\/eateseseirimastoconharry.com/john-lithgow-conferma-interpretera-lui-silente-nella-serie-tv/')">
+                            <img
+                                src="https://i0.wp.com/eateseseirimastoconharry.com/wp-content/uploads/2025/02/john-lithgow-silente-hbo.jpg?w=1600&ssl=1">
+                            <div class="card-body">
+                                <h3>John Lithgow conferma: interpreterà lui Silente nella serie TV</h3>
+                            </div>
+                        </article>
+                        <article class="carousel-card"
+                            onclick="openModal('https\:\/\/eateseseirimastoconharry.com/haribo-harry-potter-a-milano-con-un-temporary-shop-esclusivo/')">
+                            <img
+                                src="https://i0.wp.com/eateseseirimastoconharry.com/wp-content/uploads/2025/02/haribo-harry-potter.jpg?w=1600&ssl=1">
+                            <div class="card-body">
+                                <h3>Haribo porta la magia di Harry Potter a Milano con un temporary shop esclusivo</h3>
+                            </div>
+                        </article>
+                        <article class="carousel-card"
+                            onclick="openModal('https\:\/\/eateseseirimastoconharry.com/lego-harry-potter-le-novita-magiche-in-arrivo-nel-2025/')">
+                            <img
+                                src="https://i0.wp.com/eateseseirimastoconharry.com/wp-content/uploads/2025/02/novita-lego-harry-potter-copertina.jpg?w=1600&ssl=1">
+                            <div class="card-body">
+                                <h3>LEGO Harry Potter: le novità magiche in arrivo nel 2025</h3>
+                            </div>
+                        </article>
+                        <article class="carousel-card"
+                            onclick="openModal('https\:\/\/eateseseirimastoconharry.com/chris-columbus-sulla-serie-tv-di-harry-potter-penso-sia-fantastico/')">
+                            <img
+                                src="https://i0.wp.com/eateseseirimastoconharry.com/wp-content/uploads/2025/01/chris-columbus-copertina.jpg?w=1600&ssl=1">
+                            <div class="card-body">
+                                <h3>Chris Columbus sulla serie TV di Harry Potter: “Penso sia fantastico”</h3>
+                            </div>
+                        </article>
+                        <article class="carousel-card"
+                            onclick="openModal('https\:\/\/eateseseirimastoconharry.com/adventure-room-catania-harry-potter/')">
+                            <img
+                                src="https://i0.wp.com/eateseseirimastoconharry.com/wp-content/uploads/2024/12/adventure-room-copertina.jpg?w=1600&ssl=1">
+                            <div class="card-body">
+                                <h3>A Catania la nuova Adventure Room a tema Harry Potter</h3>
+                            </div>
+                        </article>
+                        <article class="carousel-card"
+                            onclick="openModal('https\:\/\/eateseseirimastoconharry.com/gennaio-maratona-harry-potter-italia-1/')">
+                            <img
+                                src="https://i0.wp.com/eateseseirimastoconharry.com/wp-content/uploads/2025/01/maratona-harry-potter-copertina.jpg?w=1600&ssl=11">
+                            <div class="card-body">
+                                <h3>Da gennaio torna su Italia 1 la maratona dei film di Harry Potter</h3>
+                            </div>
+                        </article>
+                        <article class="carousel-card"
+                            onclick="openModal('https\:\/\/eateseseirimastoconharry.com/torre-di-hogwarts-lego-harry-potter/')">
+                            <img
+                                src="https://i0.wp.com/eateseseirimastoconharry.com/wp-content/uploads/2024/12/torre-lego-copertina.jpg?w=1600&ssl=1">
+                            <div class="card-body">
+                                <h3>Tra magia e mattoncini: la Torre di Hogwarts LEGO Harry Potter</h3>
+                            </div>
+                        </article>
+                        <article class="carousel-card"
+                            onclick="openModal('https\:\/\/eateseseirimastoconharry.com/prima-dello-smistamento-come-vengono-selezionati-gli-studenti-di-hogwarts/')">
+                            <img
+                                src="https://i0.wp.com/eateseseirimastoconharry.com/wp-content/uploads/2023/12/studenti.jpg?w=1600&ssl=1">
+                            <div class="card-body">
+                                <h3>Prima dello smistamento: come vengono selezionati gli studenti di Hogwarts?</h3>
+                            </div>
+                        </article>
+                        <article class="carousel-card"
+                            onclick="openModal('https\:\/\/eateseseirimastoconharry.com/i-dietro-le-quinte-di-hermione-granger-con-flick-miles/')">
+                            <img
+                                src="https://i0.wp.com/eateseseirimastoconharry.com/wp-content/uploads/2024/11/flick-miles-copertina.jpg?w=1600&ssl=1">
+                            <div class="card-body">
+                                <h3>I dietro le quinte di Hermione Granger con Flick Miles</h3>
+                            </div>
+                        </article>
+                        <article class="carousel-card"
+                            onclick="openModal('https\:\/\/eateseseirimastoconharry.com/diagon-alley-bagnara-romagna-sabato-30-novembre/')">
+                            <img
+                                src="https://i0.wp.com/eateseseirimastoconharry.com/wp-content/uploads/2024/11/rocca-bagnara-copertina.jpg?w=1600&ssl=1">
+                            <div class="card-body">
+                                <h3>Diagon Alley sbarca a Bagnara di Romagna questo sabato 30 novembre</h3>
+                            </div>
+                        </article>
+                        <article class="carousel-card"
+                            onclick="openModal('https\:\/\/eateseseirimastoconharry.com/serie-tv-harry-potter-attesa-fino-al-2027/')">
+                            <img
+                                src="https://i0.wp.com/eateseseirimastoconharry.com/wp-content/uploads/2024/11/serie-tv-harry-potter-copertina.jpg?w=1600&ssl=1">
+                            <div class="card-body">
+                                <h3>Serie TV Harry Potter: l’attesa si prolunga fino al 2027</h3>
+                            </div>
+                        </article>
+                        <article class="carousel-card"
+                            onclick="openModal('https\:\/\/eateseseirimastoconharry.com/bbc-serie-tv-cormoran-strike/')">
+                            <img
+                                src="https://i0.wp.com/eateseseirimastoconharry.com/wp-content/uploads/2024/11/cormorian-strike-copertina.jpg?w=1600&ssl=1">
+                            <div class="card-body">
+                                <h3>BBC annuncia: in arrivo le nuove puntate della serie TV su Cormoran Strike</h3>
+                            </div>
+                        </article>
+                        <article class="carousel-card"
+                            onclick="openModal('https\:\/\/eateseseirimastoconharry.com/5-attori-che-potrebbero-interpretare-oliver-baston-nella-serie-tv/')">
+                            <img
+                                src="https://i0.wp.com/eateseseirimastoconharry.com/wp-content/uploads/2024/04/oliver-baston2-1.jpg?w=1600&ssl=1">
+                            <div class="card-body">
+                                <h3>5 attori che potrebbero interpretare Oliver Baston nella serie TV</h3>
+                            </div>
+                        </article>
+                        <article class="carousel-card"
+                            onclick="openModal('https\:\/\/eateseseirimastoconharry.com/jude-law-animali-fantastici-e-morto/')">
+                            <img
+                                src="https://i0.wp.com/eateseseirimastoconharry.com/wp-content/uploads/2024/10/jude-law-copertina.jpg?w=1600&ssl=1">
+                            <div class="card-body">
+                                <h3>Jude Law rompe il silenzio: “Con la serie TV su Harry Potter, Animali Fantastici è
+                                    morto”</h3>
+                            </div>
+                        </article>
+                        <article class="carousel-card"
+                            onclick="openModal('https\:\/\/eateseseirimastoconharry.com/speciale-halloween-a-torino-con-lescape-room-a-tema-harry-potter/')">
+                            <img
+                                src="https://i0.wp.com/eateseseirimastoconharry.com/wp-content/uploads/2024/10/halloween-torino-copertina.jpg?w=1600&ssl=1">
+                            <div class="card-body">
+                                <h3>Speciale Halloween a Torino con l’Escape Room a tema Harry Potter</h3>
+                            </div>
+                        </article>
+                        <article class="carousel-card"
+                            onclick="openModal('https\:\/\/eateseseirimastoconharry.com/giochi-della-magia-borducan-varese/')">
+                            <img
+                                src="https://i0.wp.com/eateseseirimastoconharry.com/wp-content/uploads/2024/10/borducan-varese.jpg?w=1600&ssl=1">
+                            <div class="card-body">
+                                <h3>Magia al Borducan di Varese: dal 19 ottobre al 3 novembre i Giochi della Magia 2024
+                                </h3>
+                            </div>
+                        </article>
+                        <article class="carousel-card"
+                            onclick="openModal('https\:\/\/eateseseirimastoconharry.com/5-attrici-che-potrebbero-interpretare-mirtilla-malcontenta-nella-serie-tv/')">
+                            <img
+                                src="https://i0.wp.com/eateseseirimastoconharry.com/wp-content/uploads/2024/02/mirtilla-malcontenta.jpg?w=1600&ssl=1">
+                            <div class="card-body">
+                                <h3>5 attrici che potrebbero interpretare Mirtilla Malcontenta nella serie TV</h3>
+                            </div>
+                        </article>
+                        <article class="carousel-card"
+                            onclick="openModal('https\:\/\/eateseseirimastoconharry.com/modena-nerd-con-ninfadora-thonks/')">
+                            <img
+                                src="https://i0.wp.com/eateseseirimastoconharry.com/wp-content/uploads/2024/08/modena-nerd-copertina.jpg?w=1600&ssl=1">
+                            <div class="card-body">
+                                <h3>Una domenica di emozioni al Modena Nerd con Ninfadora Tonks</h3>
+                            </div>
+                        </article>
+                        <article class="carousel-card"
+                            onclick="openModal('https\:\/\/eateseseirimastoconharry.com/from-the-wizarding-archive-in-arrivo-ad-agosto-laudiolibro-narrato-da-evanna-lynch/')">
+                            <img
+                                src="https://i0.wp.com/eateseseirimastoconharry.com/wp-content/uploads/2024/07/wizarding-archive-copertina.jpg?w=1600&ssl=1">
+                            <div class="card-body">
+                                <h3>From the Wizarding Archive: in arrivo ad agosto l’audiolibro narrato da Evanna Lynch
+                                </h3>
+                            </div>
+                        </article>
+                        <article class="carousel-card"
+                            onclick="openModal('https\:\/\/eateseseirimastoconharry.com/comicon-bergamo-l-intervista-di-always-wands-a-devon-murray/')">
+                            <img
+                                src="https://i0.wp.com/eateseseirimastoconharry.com/wp-content/uploads/2024/07/intervista-copertina.jpg?w=1600&ssl=1">
+                            <div class="card-body">
+                                <h3>Comicon Bergamo: l’intervista di Always Wands a Devon Murray</h3>
+                            </div>
+                        </article>
+                        <article class="carousel-card"
+                            onclick="openModal('https\:\/\/eateseseirimastoconharry.com/da-hogwarts-a-exeter-quando-la-magia-diventa-corso-di-studio/')">
+                            <img
+                                src="https://i0.wp.com/eateseseirimastoconharry.com/wp-content/uploads/2024/01/hogwarts-exeter.jpg?w=1600&ssl=1">
+                            <div class="card-body">
+                                <h3>Da Hogwarts a Exeter: quando la magia diventa corso di studio</h3>
+                            </div>
+                        </article>
+                        <article class="carousel-card"
+                            onclick="openModal('https\:\/\/eateseseirimastoconharry.com/attori-che-potrebbero-interpretare-argus-gazza-nella-serie-tv/')">
+                            <img
+                                src="https://i0.wp.com/eateseseirimastoconharry.com/wp-content/uploads/2024/01/attori-gazza.jpg?w=1600&ssl=1">
+                            <div class="card-body">
+                                <h3>5 attori che poterebbero interpretare Argus Gazza nella serie TV</h3>
+                            </div>
+                        </article>
+                        <article class="carousel-card"
+                            onclick="openModal('https\:\/\/eateseseirimastoconharry.com/storia-e-archeologia-in-hogwarts-legacy/')">
+                            <img
+                                src="https://i0.wp.com/eateseseirimastoconharry.com/wp-content/uploads/2024/04/archeologia-1.jpg?w=1600&ssl=1">
+                            <div class="card-body">
+                                <h3>Storia e archeologia in Hogwarts Legacy</h3>
+                            </div>
+                        </article>
+                        <article class="carousel-card"
+                            onclick="openModal('https\:\/\/eateseseirimastoconharry.com/comicon-bergamo-con-devon-murray/')">
+                            <img
+                                src="https://i0.wp.com/eateseseirimastoconharry.com/wp-content/uploads/2024/06/comicon-murray-copertina.jpg?w=1600&ssl=1">
+                            <div class="card-body">
+                                <h3>Comicon Bergamo: un fine settimana di emozioni e sorprese con Devon Murray</h3>
+                            </div>
+                        </article>
+                        <article class="carousel-card"
+                            onclick="openModal('https\:\/\/eateseseirimastoconharry.com/warner-bros-studios-le-nuove-attrazioni-a-tema-harry-potter-e-il-prigioniero-di-azkaban/')">
+                            <img
+                                src="https://i0.wp.com/eateseseirimastoconharry.com/wp-content/uploads/2024/06/copertina-studios.jpg?w=1600&ssl=1">
+                            <div class="card-body">
+                                <h3>Warner Bros Studios: le nuove attrazioni a tema Harry Potter e il Prigioniero di
+                                    Azkaban</h3>
+                            </div>
+                        </article>
+                        <article class="carousel-card"
+                            onclick="openModal('https\:\/\/eateseseirimastoconharry.com/storia-e-approfondimenti-sul-mantello-dellinvisibilita/')">
+                            <img
+                                src="https://i0.wp.com/eateseseirimastoconharry.com/wp-content/uploads/2024/05/mantello-copertina-1.jpg?w=1280&ssl=1">
+                            <div class="card-body">
+                                <h3>Storia e approfondimenti sul Mantello dell’Invisibilità</h3>
+                            </div>
+                        </article>
+                        <article class="carousel-card"
+                            onclick="openModal('http\:\/\/eateseseirimastoconharry.com/attrici-che-potrebbero-interpretare-bellatrix-lestrange-nella-serie-tv/')">
+                            <img
+                                src="https://i0.wp.com/eateseseirimastoconharry.com/wp-content/uploads/2024/02/bellatrix-lestrange.jpg?w=1600&ssl=1">
+                            <div class="card-body">
+                                <h3>6 attrici che potrebbero interpretare Bellatrix nella serie TV</h3>
+                            </div>
+                        </article>
+                        <article class="carousel-card"
+                            onclick="openModal('https\:\/\/eateseseirimastoconharry.com/avventura-magica-alla-rocca-di-bagnara-di-romagna/')">
+                            <img
+                                src="https://i0.wp.com/eateseseirimastoconharry.com/wp-content/uploads/2024/04/bagnara-romagna.jpg?w=1600&ssl=1">
+                            <div class="card-body">
+                                <h3>Avventura magica a tema Harry Potter alla Rocca di Bagnara di Romagna</h3>
+                            </div>
+                        </article>
+                        <article class="carousel-card"
+                            onclick="openModal('https\:\/\/eateseseirimastoconharry.com/grande-riapertura-a-londra-dell-harry-potter-shop-al-binario-con-luna-lovegood/')">
+                            <img
+                                src="https://i0.wp.com/eateseseirimastoconharry.com/wp-content/uploads/2024/04/shop-luna-lovegood.jpg?w=1600&ssl=1">
+                            <div class="card-body">
+                                <h3>Grande riapertura a Londra: torna l’Harry Potter Shop al Binario 9 ¾ con Luna
+                                    Lovegood</h3>
+                            </div>
+                        </article>
+                        <article class="carousel-card"
+                            onclick="openModal('https\:\/\/eateseseirimastoconharry.com/stagione-burrobirra-festa-magica-agli-universal-studios/')">
+                            <img
+                                src="https://i0.wp.com/eateseseirimastoconharry.com/wp-content/uploads/2024/03/burrobirra.jpg?w=1600&ssl=1">
+                            <div class="card-body">
+                                <h3>La stagione della Burrobirra: festa magica nei parchi Universal</h3>
+                            </div>
+                        </article>
+                        <article class="carousel-card"
+                            onclick="openModal('https\:\/\/eateseseirimastoconharry.com/gregory-goyle-e-blaise-zabini-saranno-a-verona-il-prossimo-20-aprile/')">
+                            <img
+                                src="https://i0.wp.com/eateseseirimastoconharry.com/wp-content/uploads/2024/03/blaise-goyle-malfoy-verona-1.jpg?w=1600&ssl=1">
+                            <div class="card-body">
+                                <h3>Gregory Goyle e Blaise Zabini saranno a Verona il prossimo 20 aprile</h3>
+                            </div>
+                        </article>
+                        <article class="carousel-card"
+                            onclick="openModal('https\:\/\/eateseseirimastoconharry.com/aggiornamenti-sulla-serie-tv-harry-potter-ecco-le-novita/')">
+                            <img
+                                src="https://i0.wp.com/eateseseirimastoconharry.com/wp-content/uploads/2024/01/serie-tv-aggiornamenti.jpg?w=1600&ssl=1">
+                            <div class="card-body">
+                                <h3>Aggiornamenti sulla serie TV Harry Potter: ecco le novità</h3>
+                            </div>
+                        </article>
+                        <article class="carousel-card"
+                            onclick="openModal('https\:\/\/eateseseirimastoconharry.com/dean-thomas-seamus-finnigan-unamicizia-oltre-le-differenze/')">
+                            <img
+                                src="https://i0.wp.com/eateseseirimastoconharry.com/wp-content/uploads/2024/01/dean-seamus.jpg?w=1600&ssl=1">
+                            <div class="card-body">
+                                <h3>Dean Thomas e Seamus Finnigan: un’amicizia oltre ogni difficoltà</h3>
+                            </div>
+                        </article>
+                        <article class="carousel-card"
+                            onclick="openModal('https\:\/\/eateseseirimastoconharry.com/dr-squatch-lancia-il-set-in-edizione-speciale-a-tema-harry-potter/')">
+                            <img
+                                src="https://i0.wp.com/eateseseirimastoconharry.com/wp-content/uploads/2023/12/dr-squatch-saponette.jpg?w=1600&ssl=1">
+                            <div class="card-body">
+                                <h3>Dr Squatch lancia il set di saponette a tema Harry Potter</h3>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="carousel-controls">
+                    <button onclick="prevSlide(9)">‹</button>
+                    <button onclick="nextSlide(9)">›</button>
+                </div>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/eateseseirimastoconharry" target="_blank" aria-label="Facebook">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+                    <a href="https://www.instagram.com/eateseseirimastoconharry?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                        target="_blank" aria-label="Instagram">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                    <a href="mailto:rose@eateseseirimastoconharry.com" target="_blank" aria-label="Mail">
+                        <i class="bi bi-envelope-at"></i>
+                    </a>
+                    <a href="https://eateseseirimastoconharry.com/" target="_blank" aria-label="Site">
+                        <i class="bi bi-globe"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+        <section class="portfolio-section">
+            <div class="banner uni">
+                <div class="banner-text">
+                    <h2>I miei progetti universitari:</h2>
+                </div>
+            </div>
+            <div class="container">
+                <div class="carousel">
+                    <div class="carousel-track" id="carouselTrack10">
+                        <article class="carousel-card" onclick="openModal('../progetto_web/desktop.html')">
+                            <img
+                                src="https://www.cheerz.com/it/blog/wp-content/uploads/2021/08/5e48cf3d-0992-4eda-a080-e00e07738b2f.jpg">
+                            <div class="card-body">
+                                <h4>Progetto Web Programming</h4>
+                                <p style="text-align: left;">
+                                    Progetto sviluppato nell’ambito del corso di <b>Web Programming</b> del <b>Corso di
+                                        Laurea in Informatica</b>, inserito nel mio piano di studi per il forte
+                                    interesse verso lo <b>sviluppo web</b>. Nato inizialmente come prova in itinere, il
+                                    lavoro prevedeva la realizzazione di un <b>simil terminal Linux</b> funzionante
+                                    utilizzando esclusivamente <b>HTML</b> e
+                                    <b>CSS</b>, con grafica personalizzabile: ho scelto uno <b>stile Windows
+                                        XP</b>.<br><br>
+                                    In una fase successiva, il progetto è stato esteso con l’implementazione della
+                                    <b>logica in JavaScript</b>, rendendo il terminal interattivo. Infine, per un
+                                    ulteriore progetto universitario, lo stesso concept è stato ampliato e integrato
+                                    nella realizzazione di un <b>sito personale</b>, trasformandolo in un <b>simil
+                                        desktop di Windows XP funzionante</b>, che unisce <b>design</b>,
+                                    <b>interazione</b> e <b>sviluppo frontend</b>.
+                                </p>
+
+                            </div>
+                        </article>
+                        <article class="carousel-card"
+                            onclick="openModal('../progetti_pdf/progetto_linguistica_computazionale.pdf')">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Python_image.jpg">
+                            <div class="card-body">
+                                <h4>Progetto Linguistica Computazionale</h4>
+                                <p style="text-align: left;">
+                                    Progetto sviluppato insieme al collega <b>Alessio Piemonte </b>nell’ambito del corso
+                                    di <b>Linguistica Computazionale</b>, con l’obiettivo di realizzare un sistema
+                                    automatico per la rilevazione delle fake news. Partendo da un dataset già pulito e
+                                    strutturato, il progetto combina tecniche di <strong>Natural Language
+                                        Processing</strong> tramite <strong>spaCy</strong> e
+                                    <strong>SentenceTransformer</strong> con algoritmi di <strong>apprendimento
+                                        automatico</strong>, tra cui <strong>Nearest Neighbors</strong> e una rete
+                                    neurale <strong>MLP (multi-layer perceptron)</strong>.
+                                    <br><br>
+                                    Particolare attenzione è stata dedicata all’analisi
+                                    linguistica dei testi: sono stati estratti <b>POS (part-of-speech)</b>, <b>NER
+                                        (named entity recognition)</b>, topic e conteggio medio delle parole,
+                                    generando grafici comparativi per fake e non-fake news.
+                                </p>
+                            </div>
+                        </article>
+                        <article class="carousel-card" onclick="openModal('../progetti_pdf/progetto_ontologie.pdf')">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/0/07/IiRDS_1.1_metadata.png">
+                            <div class="card-body">
+                                <h4>Progetto Ontologie e Web Semantico</h4>
+                                <p style="text-align: left;">
+                                    Progetto sviluppato insieme al collega <b>Alessio Piemonte </b>nell’ambito dell’esame di <b>Ontologie e Web Semantico</b>. L’obiettivo del lavoro è stato costruire un’ontologiaformale e semantica dell’universo narrativo della saga cinematografica di <b>Harry Potter</b>, modellando in modo strutturato i personaggi, le creature, gli oggetti, i luoghi e gli eventi principali.
+                                    <br><br>
+                                    Oltre ad aver definito <b>classi</b> e <b>sottoclassi</b>, popolate con personaggi, creature e animali fantastici, nonché <b>object properties</b> per descrivere le relazioni tra gli indivisui, sono state implementate <b>regole di inferenza</b> per dedurre alleanze e stati dei personaggi, aumentando la capacità dell’ontologia di ragionare automaticamente sulle informazioni narrative, pur incontrando alcune limitazioni tecniche con il reasoner. Il progetto combina quindi modellazione semantica e logica formale, offrendo una rappresentazione dettagliata e strutturata della saga di Harry Potter.
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- MODALE -->
+    <div class="modal" id="modal">
+        <span class="close" onclick="closeModal()">×</span>
+        <iframe id="modalIframe" frameborder="0" width="100%" height="100%"></iframe>
+    </div>
+
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Contatti</h3>
+                <ul>
+                    <li>Email: <a href="mailto:caccamom97@gmail.com">caccamom97@gmail.com</a> </li>
+                    <li>LinkedIn: <a href="https://www.linkedin.com/in/mariachiara-caccamo-2773211a1/"
+                            target="_blank">Mariachiara
+                            Caccamo</a></li>
+                    <li>GitHub: <a href="https://github.com/mcaccamo1297" target="_blank">mcaccamo1297</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Info</h3>
+                Sito personale sviluppato nell'ambito di un progetto universitario e perfezionato per mostrare competenze, progetti e percorso professionale nel campo del digitale.
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>2025 - Mariachiara Caccamo</p>
+        </div>
+    </footer>
+    <script>
+        const tracks = {
+            1: document.getElementById("carouselTrack1"),
+            2: document.getElementById("carouselTrack2"),
+            3: document.getElementById("carouselTrack3"),
+            4: document.getElementById("carouselTrack4"),
+            5: document.getElementById("carouselTrack5"),
+            6: document.getElementById("carouselTrack6"),
+            7: document.getElementById("carouselTrack7"),
+            8: document.getElementById("carouselTrack8"),
+            9: document.getElementById("carouselTrack9"),
+            10: document.getElementById("carouselTrack10"),
+        };
+
+        const indices = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 0, 9: 0, 10: 0 };
+
+
+        function getVisibleCards(track) {
+            const carousel = track.parentElement;
+            const card = track.querySelector(".carousel-card");
+            const cardWidth = card.offsetWidth + 20;
+            return Math.floor(carousel.offsetWidth / cardWidth);
+        }
+
+        function nextSlide(trackId) {
+            const track = tracks[trackId];
+            const cards = track.querySelectorAll(".carousel-card");
+            const cardWidth = track.querySelector(".carousel-card").offsetWidth + 20;
+
+            const visibleCards = Math.floor(
+                track.parentElement.offsetWidth / cardWidth
+            );
+
+            const maxIndex = cards.length - visibleCards;
+
+            if (indices[trackId] >= maxIndex) {
+                indices[trackId] = 0;
+            } else {
+                indices[trackId]++;
+            }
+
+            track.style.transform = `translateX(-${indices[trackId] * cardWidth}px)`;
+        }
+
+
+        function prevSlide(trackId) {
+            const track = tracks[trackId];
+            const cards = track.querySelectorAll(".carousel-card");
+            const cardWidth = track.querySelector(".carousel-card").offsetWidth + 20;
+
+            const visibleCards = Math.floor(track.parentElement.offsetWidth / cardWidth);
+            const maxIndex = cards.length - visibleCards;
+
+            // Se siamo all'inizio, vai all'ultima "pagina"
+            if (indices[trackId] <= 0) {
+                indices[trackId] = maxIndex;
+            } else {
+                indices[trackId]--;
+            }
+
+            track.style.transform = `translateX(-${indices[trackId] * cardWidth}px)`;
+        }
+
+
+
+        // Apri il modal e carica l'URL nell'iframe
+        function openModal(url) {
+            const modal = document.getElementById("modal");
+            const iframe = document.getElementById("modalIframe");
+            iframe.src = url;          // carica l'articolo o immagine
+            modal.style.display = "block"; // mostra il modal
+        }
+
+        // Chiudi il modal e svuota l'iframe
+        function closeModal() {
+            const modal = document.getElementById("modal");
+            const iframe = document.getElementById("modalIframe");
+            iframe.src = "";           // svuota il contenuto
+            modal.style.display = "none"; // nascondi il modal
+        }
+
+        // Chiudi il modal cliccando fuori dall'iframe (opzionale)
+        window.addEventListener('click', function (event) {
+            const modal = document.getElementById("modal");
+            if (event.target === modal) {
+                closeModal();
+            }
+        });
+
+
+
+        // Inizializza la mappa centrata su Sicilia
+        var map = L.map('map').setView([37.5636, 14.2843], 8);
+
+        // Layer OpenStreetMap
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        }).addTo(map);
+
+        // Cluster dei marker
+        var markers = L.markerClusterGroup();
+
+        // Funzione per aggiungere marker
+        function addMarker(lat, lon, img, title, desc, zip, city) {
+            var marker = L.marker([lat, lon]);
+            marker.bindPopup(
+                `<img src="${img}" alt="${title}" style="width:150px;border-radius:5%;"><br>` +
+                `<a href="${desc}" target="_blank"><b>${title}</b></a><br>` +
+                `<i>${city}</i><br><b>${zip}</b>`
+            );
+            markers.addLayer(marker);
+        }
+
+        // Lista dei marker
+        addMarker(36.6838453, 15.1332904, 'https://www.vdj.it/wp-content/uploads/2021/06/Portopalo-Capo-Passero-696x522.jpg', 'Portopalo di Capo Passero', 'https://www.vdj.it/portopalo-di-capo-passero-la-terra-dei-due-mari/', '96010', 'Libero Consorzio, SR');
+        addMarker(36.7418376, 15.1176543, 'https://www.vdj.it/wp-content/uploads/2021/06/Marzamemi-borgo-sicilia-antica-tonnara-araba-768x417.jpg', 'Marzamemi', 'https://www.vdj.it/portopalo-di-capo-passero-la-terra-dei-due-mari/', '96018', 'Pachino, SR');
+        addMarker(36.8013, 15.0938, 'https://www.vdj.it/wp-content/uploads/2021/06/Riserva-naturale-Vendicari-torre-sveva-696x441.jpg', 'Oasi Faunistica di Vendicari', 'https://www.vdj.it/oasi-faunistica-di-vendicari-la-splendida-riserva-naturale/', '96017', 'Noto, SR');
+        addMarker(36.7839507, 14.5544944, 'https://www.vdj.it/wp-content/uploads/2021/07/Marina-di-Ragusa-porto-696x321.jpg', 'Marina di Ragusa', 'https://www.vdj.it/marina-di-ragusa-tra-spiaggia-e-mare-meta-prediletta-di-sicilia/', '97010', 'Ragusa, RG');
+        addMarker(36.8550342, 15.1130841, 'https://www.vdj.it/wp-content/uploads/2021/07/Marina-di-Noto-spiaggia-lido-768x354.jpg', 'Lido di Noto', 'https://www.vdj.it/marina-di-noto-spiaggia-dorata-e-acque-cristalline/', '96017', 'Noto, SR');
+        addMarker(36.88184, 14.56414, 'https://www.vdj.it/wp-content/uploads/2021/07/Donnafugata-vino-castello-resort-coffe-house-768x576.jpg', 'Castello di Donnafugata', 'https://www.vdj.it/donnafugata-tra-vino-castello-e-resort-magica-localita-di-sicilia/', '97100', 'Ragusa, RG');
+        addMarker(36.7880597, 14.4943956, 'https://www.vdj.it/wp-content/uploads/2021/08/Punta-Secca-spiaggia-Ragusa-faro-696x405.jpg', 'Punta Secca', 'https://www.vdj.it/punta-secca-la-spiaggia-di-montalbano-in-provincia-di-ragusa', '97017', 'Santa Croce Camerina, RG');
+        addMarker(36.82432, 15.1057, 'https://www.vdj.it/wp-content/uploads/2021/08/Calamosche-spiaggia-Vendicari-696x522.jpg', 'Calamosche', 'https://www.vdj.it/calamosche-la-spiaggia-piu-famosa-di-vendicari/', '96017', 'Noto, SR');
+        addMarker(36.72652, 14.84658, 'https://www.vdj.it/wp-content/uploads/2021/08/Pozzallo-Mediterraneo-turismo-torre-cabrera-1-768x594.jpg', 'Pozzallo', 'https://www.vdj.it/pozzallo-terrazza-sul-mediterraneo-per-il-turismo/', '97016', 'RG');
+        addMarker(36.7627924, 14.6372223, 'https://www.vdj.it/wp-content/uploads/2021/08/Donnalucata-locali-Montalbano-mare-696x522.jpg', 'Donnalucata', 'https://www.vdj.it/donnalucata-tra-spiagge-locali-e-montalbano/', '97018', 'Scicli, RG');
+        addMarker(36.7126950, 14.7756370, 'https://www.vdj.it/wp-content/uploads/2021/08/Marina-di-Modica-spiaggia-lidi-696x467.jpg', 'Marina di Modica', 'https://www.vdj.it/marina-di-modica-spiaggia-e-lidi-da-bandiera-blu/', '97015', 'Modica, RG');
+        addMarker(36.7119414, 14.9409113, 'https://www.vdj.it/wp-content/uploads/2021/08/cirica-santa-maria-focallo-spiaggia-696x522.jpg', 'Santa Maria del Focallo', 'https://www.vdj.it/punta-cirica-e-santa-maria-del-focallo/', '97014', 'Ispica, RG');
+        addMarker(36.9313462, 14.7509245, 'https://www.vdj.it/wp-content/uploads/2021/08/Ragusa-Ibla-monumenti-ristoranti-696x522.jpg', 'Ragusa Ibla', 'https://www.vdj.it/ragusa-ibla-barocco-tra-monumenti-e-ristoranti/', '97100', 'Ragusa, RG');
+        addMarker(36.6589, 15.0706, 'https://www.vdj.it/wp-content/uploads/2021/09/playa-carratois-dune-lidi-1-696x381.jpg', 'Playa Carratois', 'https://www.vdj.it/playa-carratois-lidi-e-dune-in-unatmosfera-incantata/', '96018', 'Siracusa, SR');
+        addMarker(36.7673981, 15.0959275, 'https://www.vdj.it/wp-content/uploads/2021/10/san-lorenzo-spiaggia-696x522.jpg', 'San Lorenzo', 'https://www.vdj.it/san-lorenzo-la-spiaggia-caraibica-della-sicilia-jonica/', '96017', 'Noto, Siracusa SR');
+        addMarker(37.6387, 14.3911, 'https://www.vdj.it/wp-content/uploads/2022/07/pesca-leonforte-igp-1-696x522.jpeg', 'La pesca settembrina IGP', 'https://www.vdj.it/leonforte-la-pesca-settembrina-a-marchio-igp/', '94013', 'Leonforte, EN');
+        addMarker(37.6387, 14.3911, 'https://www.vdj.it/wp-content/uploads/2022/08/leonforte-fava-larga-IGP-696x430.jpg', 'La fava larga IGP', 'https://www.vdj.it/leonforte-la-fava-larga-igp-un-presidio-slow-food/', '94013', 'Leonforte, EN');
+        addMarker(37.6387, 14.3911, 'https://www.vdj.it/wp-content/uploads/2022/08/leonforte-lenticchia-nera-ennese-scaled.jpeg', 'La lenticchia nera', 'https://www.vdj.it/leonforte-la-lenticchia-nera-eccellenza-agroalimentare-dellennese/', '94013', 'Leonforte, EN');
+        addMarker(36.9846389, 15.0327033, 'https://www.vdj.it/wp-content/uploads/2022/08/noto-riserva-martin-pescatore-1152x1536.jpeg', 'Riserva \"Il Martin Pescatore\"', 'https://www.vdj.it/noto-la-riserva-il-martin-pescatore-sulle-sponde-del-manghisi/', '96017', 'Fiume Manghisi - Noto, SR');
+        addMarker(36.85691, 14.75999, 'https://www.vdj.it/wp-content/uploads/2022/09/modica-imprenditoria-giovanile-696x618.jpg', 'Fattoria delle Torri', 'https://www.vdj.it/modica-il-ristorante-fattoria-delle-torri-modello-di-imprenditoria-giovanile', '97015', 'Modica, RG');
+        addMarker(36.71256, 14.75759, 'https://www.vdj.it/wp-content/uploads/2023/08/pisciotto-mannara-montalbano-sampieri-696x522.jpg', 'Punta Pisciotto', 'https://www.vdj.it/punta-pisciotto-mannara-montalbano-scogliera-sampieri/', '97018', 'Sampieri - Scicli, RG');
+        addMarker(38.1321, 12.7386, 'https://www.vdj.it/wp-content/uploads/2023/07/sicilia-trapani-spiagge-macari-tramonto-696x522.jpg', 'Macari', 'https://www.vdj.it/sicilia-in-provincia-di-trapani-le-spiagge-incontaminate-di-macari/', '91010', 'San Vito Lo Capo, TP');
+        addMarker(36.85575, 14.75831, 'https://www.vdj.it/wp-content/uploads/2023/11/tipicita-siciliane-mpanatigghi-modica-696x522.jpg', 'Mpanatigghi', 'https://www.vdj.it/tipicita-siciliane-i-mpanatigghi-i-biscotti-da-viaggio-di-modica/', '97015', 'Modica, RG');
+        addMarker(36.8241, 14.8554, 'https://www.vdj.it/wp-content/uploads/2024/03/cava-ispica-modica-sicilia-copertina-200x150.jpg', 'Cava d\'Ispica', 'https://www.vdj.it/cava-dispica-tra-modica-e-ispica-uno-dei-maggiori-insediamenti-rupestri-della-sicilia/', '', 'Modica - Ispica, RG');
+        addMarker(37.6131, 15.1663, 'https://www.vdj.it/wp-content/uploads/2025/05/slow-food-cavolo-trunzo-1536x1152.jpg', 'Cavolo Trunzo delle Aci', 'https://www.vdj.it/eccellenze-slow-food-storia-sapori-e-rinascita-del-cavolo-trunzo-di-aci/', '', 'Terre di Aci, CT');
+        addMarker(37.60335, 15.14174, 'https://www.vdj.it/wp-content/uploads/2025/05/aci-catena-lupino-1536x1152.jpg', 'Il lupino', 'https://www.vdj.it/aci-catena-il-lupino-eccellenza-agroalimentare-e-culturale-della-sicilia-orientale/', '95022', 'Aci Catena, CT');
+        addMarker(37.6131, 15.1663, 'https://www.vdj.it/wp-content/uploads/2025/05/carnevale-acireale-sicilia-1536x1152.jpg', 'Carnevale di Acireale', 'https://www.vdj.it/carnevale-acireale-storia-e-tradizione-del-piu-bel-carnevale-di-sicilia/', '95024', 'Acireale, CT');
+        addMarker(37.7510251, 14.9940321, 'https://www.vdj.it/wp-content/uploads/2025/05/limone-etna-igp-sicilia-1536x1152.jpg', 'Limone dell\'Etna IGP', 'https://www.vdj.it/agricoltura-limone-delletna-igp-uneccellenza-di-sicilia/', '', 'Etna, CT');
+        addMarker(37.579266, 15.125712, 'https://www.vdj.it/wp-content/uploads/2025/05/santuario-madonna-valverde-1536x1152.jpg', 'Santuario della Madonna di Valverde', 'https://www.vdj.it/valverde-il-santuario-dedicato-alla-madonna-piu-antico-di-sicilia/', '95028', 'Valverde, CT');
+        addMarker(37.5827051, 15.1531532, 'https://www.vdj.it/wp-content/uploads/2025/05/terme-santa-venera-pozzo-aci-catena-1536x1152.jpg', 'Terme di Santa Venera al Pozzo', 'https://www.vdj.it/aci-catena-le-terme-di-santa-venera-al-pozzo-tra-storia-e-leggenda/', '95022', 'Aci Catena, CT');
+        addMarker(36.854649, 14.758472, 'https://www.vdj.it/wp-content/uploads/2025/05/modica-madonna-delle-grazie-santuario-600x450.jpg', 'Santuario Madonna delle Grazie', 'https://www.vdj.it/modica-la-devozione-per-la-madonna-delle-grazie-tra-storia-fede-e-tradizione/', '97015', 'Modica, RG');
+        addMarker(36.861332, 14.757487, 'https://www.vdj.it/wp-content/uploads/2025/04/pasqua-modica-madonna-itria-1.jpg', 'Santa Maria dell’Itria', 'https://www.vdj.it/riti-di-pasqua-il-martedi-dellitria-accende-modica-tra-fede-e-convivialita/', '97015', 'Modica, RG');
+        addMarker(36.860723, 14.762683, 'https://www.vdj.it/wp-content/uploads/2025/04/Madonna-vasa-vasa.jpg', 'Madonna Vasa Vasa', 'https://www.vdj.it/riti-di-pasqua-a-modica-tra-fede-e-folklore-con-la-madonna-vasa-vasa', '97015', 'Modica, RG');
+        addMarker(36.857221, 14.760700, 'https://www.vdj.it/wp-content/uploads/2024/12/chocomodica-2024-cioccolato-modica-igp-scaled.jpg', 'Chocomodica 2024', 'https://www.vdj.it/chocomodica-2024-la-citta-del-cioccolato-celebra-la-sua-eccellenza-igp/', '97015', 'Modica, RG');
+
+
+        // Aggiunge tutti i marker clusterizzati alla mappa
+        map.addLayer(markers);
+
+    </script>
+</body>
+
+</html>

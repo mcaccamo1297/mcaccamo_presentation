@@ -1,0 +1,71 @@
+
+
+
+.header>.head {
+    position: absolute;
+    top: 3px;
+    left: 5px;
+    color: white;
+    font-size: small;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 30px;
+    background: #0078D7;
+    background-image: linear-gradient(to bottom, #0078D7, #0055CC);
+    z-index: 3;
+}
+
+.footer>.start {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 30px;
+    cursor: pointer;
+}
+
+.footer>.icon {
+    position: relative;
+    left: 100px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.map-container {
+    position: absolute;
+    background-color: #F0F0F0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.map-container>.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 25px;
+    background-image: linear-gradient(to bottom, #0078D7, #0055CC);
+    padding-right: 5px;
+    border: none;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+#chiudi {
+    background: url(../img/close.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: none;
+    margin-left: 2px;
+    margin-right: 2px;
+    height: 12px;
+    width: 12px;
+    cursor: pointer;
+}

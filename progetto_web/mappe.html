@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Articoli</title>
+  <link rel="stylesheet" href="./css/map-style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"></script>
+   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.Default.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
+    
+  <style>
+    #map {
+      height: 75%;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="map-container">
+    <div class="header">
+      <div class="head">
+        Google Earth
+      </div>
+      <a href="./desktop.html"><input type="button" id="chiudi"></a>
+    </div>
+    <h1 style="padding-left: 5%; padding-bottom: 10px; padding-top: 30px;">Un tour tra le perle e tipicità della
+      Sicilia:
+    </h1>
+    <div id="map"></div>
+    <div class="footer">
+      <img class="start" src="./img/start.png">
+      <img class="icon map" src="./img/map.png">
+    </div>
+  </div>
+  <script>
+    const start = document.querySelector(".start");
+    start.addEventListener("click", () => {
+      window.location.href = "./desktop.html";
+    })
+
+    // Inizializza la mappa centrata su Sicilia
+        var map = L.map('map').setView([37.5636, 14.2843], 8);
+
+        // Layer OpenStreetMap
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        }).addTo(map);
+
+        // Cluster dei marker
+        var markers = L.markerClusterGroup();
+
+        // Funzione per aggiungere marker
+        function addMarker(lat, lon, img, title, desc, zip, city) {
+            var marker = L.marker([lat, lon]);
+            marker.bindPopup(
+                `<img src="${img}" alt="${title}" style="width:150px;border-radius:5%;"><br>` +
+                `<a href="${desc}" target="_blank"><b>${title}</b></a><br>` +
+                `<i>${city}</i><br><b>${zip}</b>`
+            );
+            markers.addLayer(marker);
+        }
+
+        // Lista dei marker
+        addMarker(36.6838453, 15.1332904, 'https://www.vdj.it/wp-content/uploads/2021/06/Portopalo-Capo-Passero-696x522.jpg', 'Portopalo di Capo Passero', 'https://www.vdj.it/portopalo-di-capo-passero-la-terra-dei-due-mari/', '96010', 'Libero Consorzio, SR');
+        addMarker(36.7418376, 15.1176543, 'https://www.vdj.it/wp-content/uploads/2021/06/Marzamemi-borgo-sicilia-antica-tonnara-araba-768x417.jpg', 'Marzamemi', 'https://www.vdj.it/portopalo-di-capo-passero-la-terra-dei-due-mari/', '96018', 'Pachino, SR');
+        addMarker(36.8013, 15.0938, 'https://www.vdj.it/wp-content/uploads/2021/06/Riserva-naturale-Vendicari-torre-sveva-696x441.jpg', 'Oasi Faunistica di Vendicari', 'https://www.vdj.it/oasi-faunistica-di-vendicari-la-splendida-riserva-naturale/', '96017', 'Noto, SR');
+        addMarker(36.7839507, 14.5544944, 'https://www.vdj.it/wp-content/uploads/2021/07/Marina-di-Ragusa-porto-696x321.jpg', 'Marina di Ragusa', 'https://www.vdj.it/marina-di-ragusa-tra-spiaggia-e-mare-meta-prediletta-di-sicilia/', '97010', 'Ragusa, RG');
+        addMarker(36.8550342, 15.1130841, 'https://www.vdj.it/wp-content/uploads/2021/07/Marina-di-Noto-spiaggia-lido-768x354.jpg', 'Lido di Noto', 'https://www.vdj.it/marina-di-noto-spiaggia-dorata-e-acque-cristalline/', '96017', 'Noto, SR');
+        addMarker(36.88184, 14.56414, 'https://www.vdj.it/wp-content/uploads/2021/07/Donnafugata-vino-castello-resort-coffe-house-768x576.jpg', 'Castello di Donnafugata', 'https://www.vdj.it/donnafugata-tra-vino-castello-e-resort-magica-localita-di-sicilia/', '97100', 'Ragusa, RG');
+        addMarker(36.7880597, 14.4943956, 'https://www.vdj.it/wp-content/uploads/2021/08/Punta-Secca-spiaggia-Ragusa-faro-696x405.jpg', 'Punta Secca', 'https://www.vdj.it/punta-secca-la-spiaggia-di-montalbano-in-provincia-di-ragusa', '97017', 'Santa Croce Camerina, RG');
+        addMarker(36.82432, 15.1057, 'https://www.vdj.it/wp-content/uploads/2021/08/Calamosche-spiaggia-Vendicari-696x522.jpg', 'Calamosche', 'https://www.vdj.it/calamosche-la-spiaggia-piu-famosa-di-vendicari/', '96017', 'Noto, SR');
+        addMarker(36.72652, 14.84658, 'https://www.vdj.it/wp-content/uploads/2021/08/Pozzallo-Mediterraneo-turismo-torre-cabrera-1-768x594.jpg', 'Pozzallo', 'https://www.vdj.it/pozzallo-terrazza-sul-mediterraneo-per-il-turismo/', '97016', 'RG');
+        addMarker(36.7627924, 14.6372223, 'https://www.vdj.it/wp-content/uploads/2021/08/Donnalucata-locali-Montalbano-mare-696x522.jpg', 'Donnalucata', 'https://www.vdj.it/donnalucata-tra-spiagge-locali-e-montalbano/', '97018', 'Scicli, RG');
+        addMarker(36.7126950, 14.7756370, 'https://www.vdj.it/wp-content/uploads/2021/08/Marina-di-Modica-spiaggia-lidi-696x467.jpg', 'Marina di Modica', 'https://www.vdj.it/marina-di-modica-spiaggia-e-lidi-da-bandiera-blu/', '97015', 'Modica, RG');
+        addMarker(36.7119414, 14.9409113, 'https://www.vdj.it/wp-content/uploads/2021/08/cirica-santa-maria-focallo-spiaggia-696x522.jpg', 'Santa Maria del Focallo', 'https://www.vdj.it/punta-cirica-e-santa-maria-del-focallo/', '97014', 'Ispica, RG');
+        addMarker(36.9313462, 14.7509245, 'https://www.vdj.it/wp-content/uploads/2021/08/Ragusa-Ibla-monumenti-ristoranti-696x522.jpg', 'Ragusa Ibla', 'https://www.vdj.it/ragusa-ibla-barocco-tra-monumenti-e-ristoranti/', '97100', 'Ragusa, RG');
+        addMarker(36.6589, 15.0706, 'https://www.vdj.it/wp-content/uploads/2021/09/playa-carratois-dune-lidi-1-696x381.jpg', 'Playa Carratois', 'https://www.vdj.it/playa-carratois-lidi-e-dune-in-unatmosfera-incantata/', '96018', 'Siracusa, SR');
+        addMarker(36.7673981, 15.0959275, 'https://www.vdj.it/wp-content/uploads/2021/10/san-lorenzo-spiaggia-696x522.jpg', 'San Lorenzo', 'https://www.vdj.it/san-lorenzo-la-spiaggia-caraibica-della-sicilia-jonica/', '96017', 'Noto, Siracusa SR');
+        addMarker(37.6387, 14.3911, 'https://www.vdj.it/wp-content/uploads/2022/07/pesca-leonforte-igp-1-696x522.jpeg', 'La pesca settembrina IGP', 'https://www.vdj.it/leonforte-la-pesca-settembrina-a-marchio-igp/', '94013', 'Leonforte, EN');
+        addMarker(37.6387, 14.3911, 'https://www.vdj.it/wp-content/uploads/2022/08/leonforte-fava-larga-IGP-696x430.jpg', 'La fava larga IGP', 'https://www.vdj.it/leonforte-la-fava-larga-igp-un-presidio-slow-food/', '94013', 'Leonforte, EN');
+        addMarker(37.6387, 14.3911, 'https://www.vdj.it/wp-content/uploads/2022/08/leonforte-lenticchia-nera-ennese-scaled.jpeg', 'La lenticchia nera', 'https://www.vdj.it/leonforte-la-lenticchia-nera-eccellenza-agroalimentare-dellennese/', '94013', 'Leonforte, EN');
+        addMarker(36.9846389, 15.0327033, 'https://www.vdj.it/wp-content/uploads/2022/08/noto-riserva-martin-pescatore-1152x1536.jpeg', 'Riserva \"Il Martin Pescatore\"', 'https://www.vdj.it/noto-la-riserva-il-martin-pescatore-sulle-sponde-del-manghisi/', '96017', 'Fiume Manghisi - Noto, SR');
+        addMarker(36.85691, 14.75999, 'https://www.vdj.it/wp-content/uploads/2022/09/modica-imprenditoria-giovanile-696x618.jpg', 'Fattoria delle Torri', 'https://www.vdj.it/modica-il-ristorante-fattoria-delle-torri-modello-di-imprenditoria-giovanile', '97015', 'Modica, RG');
+        addMarker(36.71256, 14.75759, 'https://www.vdj.it/wp-content/uploads/2023/08/pisciotto-mannara-montalbano-sampieri-696x522.jpg', 'Punta Pisciotto', 'https://www.vdj.it/punta-pisciotto-mannara-montalbano-scogliera-sampieri/', '97018', 'Sampieri - Scicli, RG');
+        addMarker(38.1321, 12.7386, 'https://www.vdj.it/wp-content/uploads/2023/07/sicilia-trapani-spiagge-macari-tramonto-696x522.jpg', 'Macari', 'https://www.vdj.it/sicilia-in-provincia-di-trapani-le-spiagge-incontaminate-di-macari/', '91010', 'San Vito Lo Capo, TP');
+        addMarker(36.85575, 14.75831, 'https://www.vdj.it/wp-content/uploads/2023/11/tipicita-siciliane-mpanatigghi-modica-696x522.jpg', 'Mpanatigghi', 'https://www.vdj.it/tipicita-siciliane-i-mpanatigghi-i-biscotti-da-viaggio-di-modica/', '97015', 'Modica, RG');
+        addMarker(36.8241, 14.8554, 'https://www.vdj.it/wp-content/uploads/2024/03/cava-ispica-modica-sicilia-copertina-200x150.jpg', 'Cava d\'Ispica', 'https://www.vdj.it/cava-dispica-tra-modica-e-ispica-uno-dei-maggiori-insediamenti-rupestri-della-sicilia/', '', 'Modica - Ispica, RG');
+        addMarker(37.6131, 15.1663, 'https://www.vdj.it/wp-content/uploads/2025/05/slow-food-cavolo-trunzo-1536x1152.jpg', 'Cavolo Trunzo delle Aci', 'https://www.vdj.it/eccellenze-slow-food-storia-sapori-e-rinascita-del-cavolo-trunzo-di-aci/', '', 'Terre di Aci, CT');
+        addMarker(37.60335, 15.14174, 'https://www.vdj.it/wp-content/uploads/2025/05/aci-catena-lupino-1536x1152.jpg', 'Il lupino', 'https://www.vdj.it/aci-catena-il-lupino-eccellenza-agroalimentare-e-culturale-della-sicilia-orientale/', '95022', 'Aci Catena, CT');
+        addMarker(37.6131, 15.1663, 'https://www.vdj.it/wp-content/uploads/2025/05/carnevale-acireale-sicilia-1536x1152.jpg', 'Carnevale di Acireale', 'https://www.vdj.it/carnevale-acireale-storia-e-tradizione-del-piu-bel-carnevale-di-sicilia/', '95024', 'Acireale, CT');
+        addMarker(37.7510251, 14.9940321, 'https://www.vdj.it/wp-content/uploads/2025/05/limone-etna-igp-sicilia-1536x1152.jpg', 'Limone dell\'Etna IGP', 'https://www.vdj.it/agricoltura-limone-delletna-igp-uneccellenza-di-sicilia/', '', 'Etna, CT');
+        addMarker(37.579266, 15.125712, 'https://www.vdj.it/wp-content/uploads/2025/05/santuario-madonna-valverde-1536x1152.jpg', 'Santuario della Madonna di Valverde', 'https://www.vdj.it/valverde-il-santuario-dedicato-alla-madonna-piu-antico-di-sicilia/', '95028', 'Valverde, CT');
+        addMarker(37.5827051, 15.1531532, 'https://www.vdj.it/wp-content/uploads/2025/05/terme-santa-venera-pozzo-aci-catena-1536x1152.jpg', 'Terme di Santa Venera al Pozzo', 'https://www.vdj.it/aci-catena-le-terme-di-santa-venera-al-pozzo-tra-storia-e-leggenda/', '95022', 'Aci Catena, CT');
+        addMarker(36.854649, 14.758472, 'https://www.vdj.it/wp-content/uploads/2025/05/modica-madonna-delle-grazie-santuario-600x450.jpg', 'Santuario Madonna delle Grazie', 'https://www.vdj.it/modica-la-devozione-per-la-madonna-delle-grazie-tra-storia-fede-e-tradizione/', '97015', 'Modica, RG');
+        addMarker(36.861332, 14.757487, 'https://www.vdj.it/wp-content/uploads/2025/04/pasqua-modica-madonna-itria-1.jpg', 'Santa Maria dell’Itria', 'https://www.vdj.it/riti-di-pasqua-il-martedi-dellitria-accende-modica-tra-fede-e-convivialita/', '97015', 'Modica, RG');
+        addMarker(36.860723, 14.762683, 'https://www.vdj.it/wp-content/uploads/2025/04/Madonna-vasa-vasa.jpg', 'Madonna Vasa Vasa', 'https://www.vdj.it/riti-di-pasqua-a-modica-tra-fede-e-folklore-con-la-madonna-vasa-vasa', '97015', 'Modica, RG');
+        addMarker(36.857221, 14.760700, 'https://www.vdj.it/wp-content/uploads/2024/12/chocomodica-2024-cioccolato-modica-igp-scaled.jpg', 'Chocomodica 2024', 'https://www.vdj.it/chocomodica-2024-la-citta-del-cioccolato-celebra-la-sua-eccellenza-igp/', '97015', 'Modica, RG');
+
+
+        // Aggiunge tutti i marker clusterizzati alla mappa
+        map.addLayer(markers);
+        </script>
+</body>
+
+</html>

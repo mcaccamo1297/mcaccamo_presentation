@@ -1,0 +1,942 @@
+body{
+    background: linear-gradient(-229deg, #D9AFD9, #97D9E1);
+}
+
+#box {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.articles>.content{
+    background: white;
+    padding-bottom: 5%;
+    margin: 5%;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+.w3-modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    background-color: #fefefe;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal-image {
+    width: 100%;
+    height: auto;
+}
+
+.w3-button {
+    background-color: transparent;
+    border: none;
+    color: gray;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.w3-button:hover {
+    color: #ccc;
+}
+
+.title {
+    position: relative;
+    padding: 1%;
+    text-align: center;
+}
+
+.title>p{
+    font-size: small;
+    text-align: justify;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.banner {
+    position: relative;
+    max-width: 100%;
+    height: 100px;
+    margin-top: 10px;
+    border-radius: 10px;
+    color: white; /* Colore del testo */
+            text-shadow:
+                1px 1px 0 black,
+                -1px -1px 0 black,
+                -1px 1px 0 black,
+                1px -1px 0 black,
+                1px 0 0 black,
+                -1px 0 0 black,
+                0 1px 0 black,
+                0 -1px 0 black;
+}
+
+.banner.vdj{
+    background: url("../img/vdj.jpg");
+    background-size: cover;
+    background-position: bottom left;
+    background-repeat: no-repeat;
+}
+
+.banner.eate{
+    background: url("../img/eate.jpg");
+    background-size: cover;
+    background-position: bottom left;
+    background-repeat: no-repeat;
+}
+
+.banner>.banner-text>h2{
+    text-align: end;
+    padding: 1%;
+}
+
+.carousel {
+    position: relative;
+    perspective: 250px;
+    width: 400px;
+    height: 200px;
+    margin-left: 22%;
+    margin-bottom: 7%;
+}
+
+@keyframes rotateCarousel {
+    from {
+        transform: rotateY(360deg) translateZ(130px) rotateY(-360deg); /* Inizio dell'animazione: ruota di 360 gradi attorno all'asse Y, trasla in Z di 130px e ruota di -360 gradi */
+        z-index: 10; /* Imposta l'elemento in primo piano */
+        opacity: 1;
+    }
+
+    50% {
+        z-index: -10; /* Sposta l'elemento dietro ad altri elementi a metà animazione */
+    }
+
+    to {
+        /* Fine dell'animazione: torna alla posizione originale senza rotazione */
+        transform: rotateY(0deg) translateZ(130px) rotateY(0deg);
+        z-index: 10; /* Riporta l'elemento in primo piano */
+        opacity: 1;
+    }
+}
+
+.carousel>.card>.card_footer {
+    position: absolute;
+    text-align: left;
+    font-size: xx-small;
+    bottom: 0;
+    width: 90%;
+    min-height: fit-content;
+    background-color: hsla(0, 0%, 100%, 0.8);
+    padding-top: 3%;
+    padding-bottom: 3%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.card {
+    width: 190px;
+    height: 120px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 35%;
+    left: 50%;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, .5);
+    text-align: center;
+    animation-name: rotateCarousel;
+    animation-duration: 36s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-play-state: running;
+    /* Stato iniziale di esecuzione */
+    cursor: pointer;
+    /* Cambia il cursore al passaggio del mouse */
+}
+
+.card:hover {
+    animation-play-state: paused;
+    /* Ferma l'animazione al passaggio del mouse */
+    border: solid #4466cc 3px;
+}
+
+/* La voce dei migranti */
+.card.card_1 {
+    background: url('https://www.vdj.it/wp-content/uploads/2024/06/legge-cutro-migranti-696x522.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation-delay: -21s;
+}
+
+.card.card_2 {
+    background: url('https://www.vdj.it/wp-content/uploads/2024/04/protocollo-italia-albania-cpr-768x432.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation-delay: -18s;
+}
+
+.card.card_3 {
+    background: url('https://www.vdj.it/wp-content/uploads/2024/03/repoprt-diritto-asilo-dati-696x464.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation-delay: -15s;
+}
+
+.card.card_4 {
+    background: url('https://www.vdj.it/wp-content/uploads/2024/03/report-diritto-asilo-2023-migranti-696x464.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation-delay: -12s;
+}
+
+.card.card_5 {
+    background: url('https://www.vdj.it/wp-content/uploads/2022/11/mediterraneo-la-pira-mattei-scaled.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation-delay: -9s;
+}
+
+.card.card_6 {
+    background: url('https://www.vdj.it/wp-content/uploads/2022/10/mediterraneo-giorgio-la-pira-696x441.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation-delay: -6s;
+}
+
+.card.card_7 {
+    background: url('https://www.vdj.it/wp-content/uploads/2022/03/Caritas-Acireale-Ucraina-aiuto-umanitario-1-200x150.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation-delay: -3s;
+}
+
+.card.card_8 {
+    background: url('https://www.vdj.it/wp-content/uploads/2022/03/ucraina-catania-iniziative-pace-696x464.jpeg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Tecnologie e innovazione */
+
+.card.card_9 {
+    background: url('https://www.vdj.it/wp-content/uploads/2024/05/CMCC-supercomputer-Lenovo-Ricca-IT-768x352.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation-delay: -21s;
+}
+
+.card.card_10 {
+    background: url('https://www.vdj.it/wp-content/uploads/2024/04/cybersiurezza-dato-aziende-digitale-696x464.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation-delay: -18s;
+}
+
+.card.card_11 {
+    background: url('https://www.vdj.it/wp-content/uploads/2024/02/hack-your-talent-ragusa-2024-696x265.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation-delay: -15s;
+}
+
+.card.card_12 {
+    background: url('https://www.vdj.it/wp-content/uploads/2023/03/ragusa-hack-your-talent-696x465.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation-delay: -12s;
+}
+
+
+.card.card_13 {
+    background: url('https://www.vdj.it/wp-content/uploads/2023/01/hack-your-talent-ragusa-studenti-scaled.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation-delay: -9s;
+}
+
+.card.card_14 {
+    background: url('https://www.vdj.it/wp-content/uploads/2022/07/arethusa-tumori-colon-retto-crisafulli-696x516.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation-delay: -6s;
+}
+
+.card.card_15 {
+    background: url('https://www.vdj.it/wp-content/uploads/2022/07/Sanita-696x464.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation-delay: -3s;
+}
+
+.card.card_16 {
+    background: url('https://www.vdj.it/wp-content/uploads/2021/07/TikTok-video-creativita-696x696.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/*Terre di Aci*/
+
+.card.card_17 {
+    background: url('https://www.vdj.it/wp-content/uploads/2024/04/agricoltura-acireale--696x492.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation-delay: -44s;
+}
+
+.card.card_18 {
+    background: url('https://www.vdj.it/wp-content/uploads/2024/03/GAL-terre-di-Aci-centri-facilitazione-digitale-696x464.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation-delay: -41s;
+}
+
+.card.card_19 {
+    background: url('https://www.vdj.it/wp-content/uploads/2023/11/gal-living-lab-aci-inaugurazione.jpeg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation-delay: -39s;
+}
+
+.card.card_20 {
+    background: url('https://www.vdj.it/wp-content/uploads/2023/09/gal-aci-bando-proroga-696x464.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation-delay: -36s;
+}
+
+.card.card_21 {
+    background: url('https://www.vdj.it/wp-content/uploads/2023/07/carapaci-appello-timpa-acireale-696x522.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation-delay: -33s;
+}
+
+.card.card_22 {
+    background: url('https://www.vdj.it/wp-content/uploads/2023/07/gal-aci-barbagallo-presidente-scaled.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation-delay: -30s;
+}
+
+.card.card_23 {
+    background: url('https://www.vdj.it/wp-content/uploads/2023/06/GAL-Aci-Ali-sindaci-scaled.jpeg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation-delay: -27s;
+}
+
+.card.card_24 {
+    background: url('https://www.marziachiesa.it/wp-content/uploads/2021/08/Simple-Photo-Fashion-Facebook-Cover-1-1170x690.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation-delay: -24s;
+}
+
+.card.card_25 {
+    background: url('https://www.vdj.it/wp-content/uploads/2023/05/Team-Gal-Terre-di-Aci-dipartimento-agricoltura-696x537.jpeg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation-delay: -21s;
+}
+
+.card.card_26 {
+    background: url('https://www.vdj.it/wp-content/uploads/2023/05/Gal-aci-ali-bilancio-696x522.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation-delay: -18s;
+}
+
+.card.card_27 {
+    background: url('https://www.vdj.it/wp-content/uploads/2022/10/percorso-mulini-Aci-Catena-696x653.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation-delay: -15s;
+}
+
+.card.card_28 {
+    background: url('https://www.vdj.it/wp-content/uploads/2022/12/progetto-HortNet-buoni-frutti.jpeg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation-delay: -12s;
+}
+
+.card.card_29 {
+    background: url('https://www.vdj.it/wp-content/uploads/2022/12/progetto-HortNet-buoni-frutti.jpeg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation-delay: -9s;
+}
+
+.card.card_30 {
+    background: url('https://www.vdj.it/wp-content/uploads/2022/10/Limone-dellEtna.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation-delay: -6s;
+}
+
+.card.card_31 {
+    background: url('https://www.vdj.it/wp-content/uploads/2022/09/Gal-Terre-di-Aci.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation-delay: -3s;
+}
+
+.card.card_32 {
+    background: url('https://www.vdj.it/wp-content/uploads/2021/02/timpa-acireale-768-x-576-487x365.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+/* Ambiente e sostenibillità */
+
+.card.card_33 {
+    background: url('https://www.vdj.it/wp-content/uploads/2022/09/Archimede-Solar-Car-Futuro-Solare-Onlus-1-696x736.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation-delay: -30s;
+}
+
+.card.card_34 {
+    background: url('https://www.vdj.it/wp-content/uploads/2022/05/modica-comune-plastic-free-696x522.jpeg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation-delay: -27s;
+}
+
+.card.card_35 {
+    background: url('https://www.lasiciliaweb.it/wp-content/uploads/2021/09/009-4.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation-delay: -24s;
+}
+
+.card.card_36 {
+    background: url('https://www.vdj.it/wp-content/uploads/2021/12/plastic-free-piantumazione-catania-onlus-1-scaled.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation-delay: -21s;
+}
+
+.card.card_37 {
+    background: url('https://www.vdj.it/wp-content/uploads/2021/11/emergenza-rifiuti-differenziata-catania-696x511.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation-delay: -18s;
+}
+
+.card.card_38 {
+    background: url('https://www.cartabiancanews.com/wp-content/uploads/2023/05/maltempo-plastic-free.jpeg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation-delay: -15s;
+}
+
+.card.card_39 {
+    background: url('https://www.vdj.it/wp-content/uploads/2021/10/medicane-sicilia-jonica-catania-200x150.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation-delay: -12s;
+}
+
+.card.card_40 {
+    background: url('https://www.vdj.it/wp-content/uploads/2021/10/discarica-lentini-sicula-trasporti-rifiuti-768x576.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation-delay: -9s;
+}
+
+.card.card_41 {
+    background: url('https://www.vdj.it/wp-content/uploads/2021/09/plastic-free-pianeta-raccolta-696x464.jpeg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation-delay: -6s;
+}
+
+.card.card_42 {
+    background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMw710fXodMtVNjBQna0VbC_Tw_0PvVEoI5g&s');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation-delay: -3s;
+}
+
+.card.card_43 {
+    background: url('https://www.vdj.it/wp-content/uploads/2021/07/Gioosto-e-commerce-sostenibile.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Economia e management */
+
+.card.card_44 {
+    background: url('https://www.vdj.it/wp-content/uploads/2024/03/ricca-it-stelle-sud-696x325.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation-delay: -33s;
+}
+
+.card.card_45 {
+    background: url('https://www.vdj.it/wp-content/uploads/2024/02/Catania-MyFunds-App-bandi-768x417.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation-delay: -30s;
+}
+
+.card.card_46 {
+    background: url('https://www.vdj.it/wp-content/uploads/2023/11/Peppe-Cassi-sindaco-Ragusa.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation-delay: -27s;
+}
+
+.card.card_47 {
+    background: url('https://www.vdj.it/wp-content/uploads/2023/11/Stefano-Ricca-IT-25-anni-scaled.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation-delay: -24s;
+}
+
+.card.card_48 {
+    background: url('https://www.vdj.it/wp-content/uploads/2023/11/ragusa-inaugurazione-ricca-it-agora-696x522.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation-delay: -21s;
+}
+
+.card.card_49 {
+    background: url('https://www.vdj.it/wp-content/uploads/2023/10/altroconsumo-inchiesta-spesa-online-696x464.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation-delay: -18s;
+}
+
+.card.card_50 {
+    background: url('https://www.vdj.it/wp-content/uploads/2023/10/Gianfranco-Castro-Manager-200x150.jpeg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation-delay: -15s;
+}
+
+.card.card_51 {
+    background: url('https://www.vdj.it/wp-content/uploads/2023/10/lavoro-ragusa-Ricca-IT-persone-facciata-696x464.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation-delay: -12s;
+}
+
+.card.card_52 {
+    background: url('https://www.vdj.it/wp-content/uploads/2023/10/Veronica-Diquattro.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation-delay: -9s;
+}
+
+.card.card_53 {
+    background: url('https://www.vdj.it/wp-content/uploads/2023/09/MEN-portale-lavoro-Acireale-sito-696x358.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation-delay: -6s;
+}
+
+.card.card_54 {
+    background: url('https://www.vdj.it/wp-content/uploads/2023/08/ragusani-mondo-stefano-ricca-696x696.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation-delay: -3s;
+}
+
+.card.card_55 {
+    background: url('https://www.vdj.it/wp-content/uploads/2023/06/ragusani-mondo-premio-696x696.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/*Cultura ed eventi*/
+
+.card.card_56 {
+    background: url('https://www.vdj.it/wp-content/uploads/2024/01/acireale-scuola-don-milani-scaled.jpeg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation-delay: -24s;
+}
+
+.card.card_57 {
+    background: url('https://www.vdj.it/wp-content/uploads/2023/12/istituto-carlo-amore-modica-biblioteca-696x392.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation-delay: -21s;
+}
+
+.card.card_58 {
+    background: url('https://www.vdj.it/wp-content/uploads/2023/10/Siracusa-nuovo-Bookstore-in-centro.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation-delay: -18s;
+}
+
+.card.card_59 {
+    background: url('https://www.vdj.it/wp-content/uploads/2023/07/libro-cosmi-brischetto-medico-paziente-696x464.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation-delay: -15s;
+}
+
+.card.card_60 {
+    background: url('https://www.vdj.it/wp-content/uploads/2023/06/podcast-genz-audio-696x382.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation-delay: -12s;
+}
+
+.card.card_61 {
+    background: url('https://www.vdj.it/wp-content/uploads/2022/12/Giorgio-La-Pira-volume-Senato-768x432.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation-delay: -9s;
+}
+
+.card.card_62 {
+    background: url('https://qds.it/wp-content/uploads/sites/2/2022/07/caltagirone-film-festival-2022.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation-delay: -6s;
+}
+
+.card.card_63 {
+    background: url('https://www.vdj.it/wp-content/uploads/2021/12/maestra-anna-bonaccorsi-pensione-lettera-768x514.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation-delay: -3s;
+}
+
+.card.card_64 {
+    background: url('https://www.vdj.it/wp-content/uploads/2021/10/catania-machiavelli-cut-unict.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/*News e altro*/
+
+.card.card_65 {
+    background: url('https://www.vdj.it/wp-content/uploads/2024/01/120-anniversario-la-pira-pozzallo-696x374.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation-delay: -39s;
+}
+
+.card.card_66 {
+    background: url('https://www.vdj.it/wp-content/uploads/2023/12/corallo-tv-speciale-pace-696x436.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation-delay: -36s;
+}
+
+.card.card_67 {
+    background: url('https://www.vdj.it/wp-content/uploads/2023/11/cei-app-bibbia-696x290.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation-delay: -33s;
+}
+
+.card.card_68 {
+    background: url('https://www.vdj.it/wp-content/uploads/2023/10/ponte-stretto-messina-calabria-696x470.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation-delay: -30s;
+}
+
+.card.card_69 {
+    background: url('https://www.vdj.it/wp-content/uploads/2023/10/ponte-stretto-aspetti-geologici-messina-calabria-768x512.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation-delay: -27s;
+}
+
+.card.card_70 {
+    background: url('https://www.vdj.it/wp-content/uploads/2022/12/covid-19-wuhan-pandemia-globale-origini-696x464.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation-delay: -24s;
+}
+
+.card.card_71 {
+    background: url('https://www.vdj.it/wp-content/uploads/2022/10/Veglia-di-tutti-i-santi-2022-scaled.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation-delay: -21s;
+}
+
+.card.card_72 {
+    background: url('https://www.vdj.it/wp-content/uploads/2022/12/Giuseppe-Ursino-Europe-Direct-Catania-478x259.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation-delay: -18s;
+}
+
+.card.card_73 {
+    background: url('https://www.vdj.it/wp-content/uploads/2022/09/uniti-nel-dono-Giornata-8xmille-696x614.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation-delay: -15s;
+}
+
+.card.card_74 {
+    background: url('https://www.vdj.it/wp-content/uploads/2022/09/elezioni-giovani-gen-z-696x696.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation-delay: -12s;
+}
+
+.card.card_75 {
+    background: url('https://www.vdj.it/wp-content/uploads/2022/08/scienziata-grassellino-computer-quantico-chicago-696x696.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation-delay: -9s;
+}
+
+.card.card_76 {
+    background: url('https://www.vdj.it/wp-content/uploads/2022/07/piazza-scammacca-riqualificazione-urbana-696x696.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation-delay: -6s;
+}
+
+.card.card_77 {
+    background: url('https://www.vdj.it/wp-content/uploads/2022/07/sicilia-calcio-giovani.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation-delay: -3s;
+}
+
+.card.card_78 {
+    background: url('https://www.vdj.it/wp-content/uploads/2021/12/servizi-online-spid-app.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/*Articoli Eate*/
+
+.eate{
+    font-family: 'Harry Potter', sans-serif;
+}
+
+.card.card_79 {
+    background: url('https://i0.wp.com/eateseseirimastoconharry.com/wp-content/uploads/2017/07/biblioterapia.jpg?fit=1600%2C1200&ssl=1');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation-delay: -39s;
+}
+
+.card.card_80 {
+    background: url('https://i0.wp.com/eateseseirimastoconharry.com/wp-content/uploads/2023/12/dr-squatch-saponette.jpg?fit=1600%2C1200&ssl=1');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation-delay: -36s;
+}
+
+.card.card_81 {
+    background: url('https://i0.wp.com/eateseseirimastoconharry.com/wp-content/uploads/2024/03/burrobirra.jpg?fit=1600%2C1200&ssl=1');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation-delay: -33s;
+}
+
+.card.card_82 {
+    background: url('https://i0.wp.com/eateseseirimastoconharry.com/wp-content/uploads/2024/04/shop-luna-lovegood.jpg?fit=1600%2C1200&ssl=1');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation-delay: -30s;
+}
+
+.card.card_83 {
+    background: url('https://i0.wp.com/eateseseirimastoconharry.com/wp-content/uploads/2024/04/bagnara-romagna.jpg?fit=1600%2C1200&ssl=1');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation-delay: -27s;
+}
+
+.card.card_84 {
+    background: url('https://i0.wp.com/eateseseirimastoconharry.com/wp-content/uploads/2024/02/bellatrix-lestrange.jpg?fit=1600%2C1200&ssl=1');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation-delay: -24s;
+}
+
+.card.card_85 {
+    background: url('https://i0.wp.com/eateseseirimastoconharry.com/wp-content/uploads/2024/05/mantello-copertina-1.jpg?fit=1280%2C960&ssl=1');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation-delay: -21s;
+}
+
+.card.card_86 {
+    background: url('https://i0.wp.com/eateseseirimastoconharry.com/wp-content/uploads/2024/06/copertina-studios.jpg?fit=1600%2C1200&ssl=1');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation-delay: -18s;
+}
+
+.card.card_87 {
+    background: url('https://i0.wp.com/eateseseirimastoconharry.com/wp-content/uploads/2024/06/comicon-murray-copertina.jpg?fit=1600%2C1200&ssl=1');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation-delay: -15s;
+}
+
+.card.card_88 {
+    background: url('https://i0.wp.com/eateseseirimastoconharry.com/wp-content/uploads/2024/04/archeologia-1.jpg?fit=1600%2C1200&ssl=1');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation-delay: -12s;
+}
+
+.card.card_89 {
+    background: url('https://i0.wp.com/eateseseirimastoconharry.com/wp-content/uploads/2024/01/attori-gazza.jpg?fit=1600%2C1200&ssl=1');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation-delay: -9s;
+}
+
+.card.card_90 {
+    background: url('https://i0.wp.com/eateseseirimastoconharry.com/wp-content/uploads/2024/01/hogwarts-exeter.jpg?fit=1600%2C1200&ssl=1');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation-delay: -6s;
+}
+
+.card.card_91 {
+    background: url('https://i0.wp.com/eateseseirimastoconharry.com/wp-content/uploads/2024/07/intervista-copertina.jpg?fit=1600%2C1200&ssl=1');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation-delay: -3s;
+}
+
+.card.card_92 {
+    background: url('https://eateseseirimastoconharry.com/wp-content/uploads/2024/07/wizarding-archive-copertina.jpg?ezimgfmt=rs:392x280/rscb1/ngcb1/notWebP');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Media queries per adattare il layout a schermi più piccoli */
+@media (max-width: 768px) {
+    .carousel {
+        width: 90%; /* Larghezza del carousel su schermi più piccoli */
+        margin-bottom: 25%; /* Margine inferiore */
+    }
+    .card {
+        width: 25%; /* Larghezza delle carte su schermi più piccoli */
+        left: 25%; /* Posizione orizzontale */
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel {
+        width: 90%; /* Larghezza del carousel su schermi molto piccoli */
+        margin-bottom: 45%; /* Margine inferiore */
+    }
+    .card {
+        width: 55%; /* Larghezza delle carte su schermi molto piccoli */
+        left: 5%; /* Posizione orizzontale */
+    }
+}

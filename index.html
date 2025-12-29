@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profilo personale</title>
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="./stylesheet/style.css">
+  <link rel="stylesheet" href="./stylesheet/nav.css">
+  <script src="./js/nav.js"></script>
+</head>
+<style>
+  .container {
+    max-width: 80%;
+    padding: 20px;
+    display: flex;
+  }
+
+  .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    /* Altezza delle colonne uguale */
+    flex-wrap: wrap;
+  }
+
+  .col-sm {
+    flex: 1 1 auto;
+    padding: 20px;
+  }
+
+
+  hr {
+    border: 1px solid;
+    margin: 10px 0;
+  }
+
+
+
+  .flex-container {
+    margin-left: 10%;
+    margin-right: 10%;
+    overflow: hidden;
+    border-radius: 5px;
+    flex-wrap: wrap;
+  }
+
+  .p {
+    flex-basis: 50%;
+  }
+
+  .banner {
+    width: 95%;
+    height: 100px;
+    margin: 2%;
+    border-radius: 10px;
+    color: white;
+    text-shadow:
+      1px 1px 0 black,
+      -1px -1px 0 black,
+      -1px 1px 0 black,
+      1px -1px 0 black,
+      1px 0 0 black,
+      -1px 0 0 black,
+      0 1px 0 black,
+      0 -1px 0 black;
+
+    text-align: right;
+
+  }
+
+  .banner.home {
+    background: url("./img/banner.jpg");
+    background-size: cover;
+    background-position: bottom left;
+    background-repeat: no-repeat;
+    padding-left: 2%;
+  }
+
+  .banner.banner.home>h1 {
+    padding: 2%;
+  }
+
+  .intro-flex {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    /* spazio tra foto e testo */
+    flex-wrap: wrap;
+  }
+
+  .intro-photo img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+
+
+  .intro-text {
+    flex: 1;
+    min-width: 200px;
+  }
+
+
+  @media (max-width: 768px) {
+    .intro-flex {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+</style>
+
+<body>
+
+  <nav class="navbar">
+    <div class="navbar-brand"><a class="navbar-brand" href="./index.html">
+        <div id="circle-image"></div>
+        Mariachiara Caccamo
+      </a></div>
+    <button class="navbar-toggle" id="navbarToggle"><i class="bi bi-list"></i></button>
+    <ul class="navbar-menu" id="navbarMenu">
+      <li><a href="./index.html">Home</a></li>
+      <li><a href="./pag/curriculum.html">Curriculum</a></li>
+      <li><a href="./pag/esperienze.html">Altre esperienze</a></li>
+      <li><a href="./pag/portfolio.html">Portfolio</a></li>
+    </ul>
+  </nav>
+
+  <div class="banner home">
+    <h1>
+      Qualcosa su di me...
+    </h1>
+  </div>
+  <div class="flex-container">
+
+    <div class="col-sm">
+      <div class="intro-flex">
+        <div class="intro-photo">
+          <img src="./img/intro_photo.jpg" alt="Mariachiara Caccamo">
+        </div>
+        <div class="intro-text">
+          <h2 class="h4">Ciao sono Mariachiara,</h2>
+          <p>
+            vengo da Modica (RG) e sono appassionata di comunicazione digitale.
+            Sono laureata in <b>Scienze e Lingue per la Comunicazione (L-20)</b> e specializzata in <b>Scienze del Testo
+              per
+              le Professioni Digitali (LM-43)</b> con <b>110/110 e Lode</b>. La mia tesi magistrale, <i>“Preferenze di
+              condivisione dei dati personali e standard di conformità: un approccio basato sui modelli di
+              linguaggio”</i>,
+            indaga la possibilità di sfruttare i modelli linguistici per una gestione efficace della data privacy.
+
+          </p>
+          <p>
+            La mia prima esperienza pratica con l’informatica risale al primo anno di università, quando ho frequentato
+            il
+            corso di laurea in <b>Matematica e Informatica</b> e mi sono avvicinata allo studio di <b>Python</b> e
+            <b>LaTeX</b>. Anche se in seguito ho scelto di cambiare percorso, questo primo anno mi ha fornito basi
+            solide e un
+            metodo di studio più analitico, che ancora oggi mi accompagna. Durante la triennale in <b>Scienze e Lingue
+              per
+              la Comunicazione (L-20)</b>, grazie al <b>professor Davide Bennato</b>, ho scoperto la possibilità di
+            unire
+            gli studi umanistici alla mia inclinazione per le discipline scientifiche e al mondo digitale con il corso
+            di
+            laurea magistrale allora ancora nascente.
+
+          </p>
+        </div>
+      </div>
+
+      <p>
+        <b>Scienze del Testo</b> è stato per me un percorso di trasformazione. Mi ha permesso di osservare l’ambito
+        umanistico
+        da una prospettiva nuova, più critica e più aperta alle tecnologie, aiutandomi a sviluppare competenze
+        trasversali che non avrei potuto acquisire altrove. L’incontro con l’informatica, che mi attirava e spaventava
+        allo stesso tempo, si è rivelato un passaggio decisivo: ho potuto lavorare con strumenti che rappresentano il
+        futuro per lo sviluppo delle discipline umanistiche e comprendere come possano integrarsi in modo naturale con
+        la nostra formazione. Da appassionata di materie scientifiche, questo corso mi ha permesso di recuperare e
+        riscoprire <b>l’amore per la matematica</b>, mostrandomi che non esiste una scelta obbligata tra il mondo
+        scientifico e
+        quello umanistico. Ho capito che è possibile coltivare entrambi gli aspetti, integrandoli passo dopo passo in un
+        <b>percorso completo</b> e maggiormente spendibile in una prospettiva lavorativa.
+      </p>
+
+      <hr>
+      <h3 class="h5 mt-4">Di cosa mi occupo</h3>
+      <p>
+        Parallelamente agli studi ho maturato esperienza in ambito di <b>comunicazione digitale</b>,
+        <b>content creation</b> e <b>social media management</b>. In particolare ho lavorato nel settore
+        giornalistico, dove ho acquisito esperienza nella stesura e pubblicazione di articoli
+        (con il conseguimento del <b>tesserino da giornalista pubblicista</b>), nella gestione delle
+        piattaforme social (<b>Instagram</b>, <b>LinkedIn</b>, <b>Facebook</b>, <b>X</b>),
+        nell’analisi del traffico, nell’ottimizzazione SEO e nell’implementazione di chatbot su
+        <b>Telegram</b>. Attraverso una serie di collaborazioni, sia retribuite che su base volontaria, ho avuto modo di
+        padroneggiare <b>WordPress</b> come strumento editoriale, <b>Canva</b> per la creazione di
+        contenuti grafici per i social (post, caroselli, locandine), nonché l’integrazione di strumenti
+        di <b>intelligenza artificiale</b> nei processi di produzione e gestione dei contenuti.
+        Allo stesso tempo maturo interesse per <b>progettazione e sviluppo di siti web in HTML, CSS e JavaScript</b>.
+        Possiedo competenze di base in <b>sviluppo frontend</b> e mi dedico a questi aspetti in progetti
+        personali, come questo sito, e in precedenti progetti universitari. Mi piacerebbe approfondire
+        ulteriormente tali competenze in un contesto lavorativo, integrandole con le mie conoscenze in
+        comunicazione digitale e gestione dei contenuti.
+      </p>
+
+
+      <hr>
+      <h3 class="h5 mt-4">Competenze digitali</h3>
+      <ul>
+        <li>Content creation e gestione social media</li>
+        <li>SEO e ottimizzazione dei contenuti</li>
+        <li>WordPress &amp; gestione editoriale</li>
+        <li>Creazione grafica con Canva</li>
+        <li>Analisi del traffico web e dei dati social</li>
+        <li>Sviluppo web base (HTML, CSS, Bootstrap, JavaScript, PHP)</li>
+        <li>Python di base e utilizzo di strumenti AI</li>
+        <li>Markup in XML-TEI</li>
+      </ul>
+      <hr>
+
+      <h3 class="h5 mt-4">Competenze linguistiche</h3>
+      <ul>
+        <li><b>Italiano</b> - Madrelingua</li>
+        <li><b>Inglese</b> - C1</li>
+        <li><b>Spagnolo</b> - B2</li>
+        <li><b>Francese</b> - B1</li>
+      </ul>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>Contatti</h3>
+        <ul>
+          <li>Email: <a href="mailto:caccamom97@gmail.com">caccamom97@gmail.com</a> </li>
+          <li>LinkedIn: <a href="https://www.linkedin.com/in/mariachiara-caccamo-2773211a1/" target="_blank">Mariachiara
+              Caccamo</a></li>
+          <li>GitHub: <a href="https://github.com/mcaccamo1297" target="_blank">mcaccamo1297</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Info</h3>
+        Sito personale sviluppato nell'ambito di un progetto universitario e perfezionato per mostrare competenze,
+        progetti e percorso professionale nel campo del digitale.
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>2025 - Mariachiara Caccamo</p>
+    </div>
+  </footer>
+
+</body>
+
+
+
+</html>
