@@ -27,12 +27,6 @@
     flex-wrap: wrap;
   }
 
-  .col-sm {
-    flex: 1 1 auto;
-    padding: 20px;
-  }
-
-
   hr {
     border: 1px solid;
     margin: 10px 0;
@@ -43,10 +37,16 @@
   .flex-container {
     margin-left: 10%;
     margin-right: 10%;
+    margin-top: 0;
     overflow: hidden;
     border-radius: 5px;
     flex-wrap: wrap;
-  }
+}
+
+.col-sm {
+    flex: 1 1 auto;
+    padding: 10px 20px;
+}
 
   .p {
     flex-basis: 50%;
@@ -55,7 +55,7 @@
   .banner {
     width: 95%;
     height: 100px;
-    margin: 2%;
+    margin: 2% auto 10px auto;
     border-radius: 10px;
     color: white;
     text-shadow:
@@ -67,52 +67,68 @@
       -1px 0 0 black,
       0 1px 0 black,
       0 -1px 0 black;
-
     text-align: right;
+}
 
-  }
-
-  .banner.home {
+.banner.home {
     background: url("./img/banner.jpg");
     background-size: cover;
     background-position: bottom left;
     background-repeat: no-repeat;
     padding-left: 2%;
-  }
+    box-sizing: border-box;
+}
 
-  .banner.banner.home>h1 {
+.banner.home h1 {
     padding: 2%;
-  }
+    margin: 0;
+}
 
-  .intro-flex {
+ .intro-flex {
     display: flex;
-    align-items: flex-start;
-    gap: 20px;
-    /* spazio tra foto e testo */
-    flex-wrap: wrap;
-  }
+    align-items: stretch;
+    gap: 30px;
+}
 
-  .intro-photo img {
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
+.intro-photo {
+    flex: 0 0 30%;
+    min-width: 0;
+}
+
+.intro-photo img {
+    width: 100%;
+    height: 100%;
+    display: block;
     object-fit: cover;
-    flex-shrink: 0;
-  }
+    object-position: center;
+    border-radius: 10px;
+}
 
-
-  .intro-text {
+.intro-text {
     flex: 1;
-    min-width: 200px;
-  }
+    min-width: 0;
+}
+
 
 
   @media (max-width: 768px) {
     .intro-flex {
-      flex-direction: column;
-      align-items: center;
+        flex-direction: column;
+        gap: 20px;
     }
-  }
+
+    .intro-photo {
+        flex: none;
+        width: 100%;
+        height: 300px;
+    }
+
+    .intro-photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
 </style>
 
 <body>
@@ -146,48 +162,29 @@
         <div class="intro-text">
           <h2 class="h4">Ciao, sono Mariachiara,</h2>
           <p>
-             vengo da Modica (RG) e sono appassionata di comunicazione digitale. Sono laureata in <b>Scienze e Lingue per la Comunicazione (L-20)</b> e specializzata in <b>Scienze del Testo per le Professioni Digitali (LM-43)</b> con <b>110/110 e Lode</b>. La mia tesi magistrale, <b><i>Preferenze di condivisione dei dati personali e standard di conformità: un approccio basato sui modelli di linguaggio</i></b>, indaga come i modelli linguistici possano supportare una gestione efficace della privacy dei dati, unendo umanistica e digitale. 
+            Vengo da <b>Modica (RG)</b> e mi occupo di comunicazione digitale, content creation e social media
+            management. Il mio percorso nasce dall'incontro tra formazione umanistica e interesse per le discipline
+            scientifiche e tecnologiche.
           </p>
-          <h3>Il mio percorso universitario</h3>
           <p>
-            La mia prima esperienza pratica con l’informatica risale al primo anno di università, quando ancora frequentavo il corso di laurea in <b>Matematica e Informatica</b> e mi sono avvicinata allo studio di <b>Python</b> e <b>LaTeX</b>. Anche se in seguito ho cambiato percorso, questo primo anno mi ha fornito basi solide e un metodo di studio analitico, che ancora oggi applico nel mio lavoro. Durante la triennale in <b>Scienze e Lingue per la Comunicazione</b> ho poi scoperto la possibilità di unire gli studi umanistici alla mia inclinazione per le discipline scientifiche e al mondo digitale, dando vita al mio percorso magistrale.
+            Sono laureata in <b>Scienze e Lingue per la Comunicazione (L-20)</b> e specializzata in <b>Scienze del Testo
+              per le Professioni Digitali (LM-43)</b>, con 110/110 e lode. Una formazione interdisciplinare che mi ha
+            permesso di sviluppare uno sguardo trasversale sulla comunicazione e sulle possibilità offerte dalle nuove
+            tecnologie.
+          </p>
+          <p>
+            Ho maturato esperienza nel settore giornalistico e nella gestione di contenuti digitali, occupandomi di
+            scrittura, social media, SEO e comunicazione online. Utilizzo strumenti come WordPress e Canva e integro
+            soluzioni di intelligenza artificiale nei processi di produzione e gestione dei contenuti.
+          </p>
+          <p>
+            Accanto alla comunicazione, coltivo un interesse per il web development e per le tecnologie digitali,
+            sperimentando con HTML, CSS e JavaScript.
+            <br>
+            <b>Mi interessa tutto ciò che nasce dall'incontro tra parole, tecnologia e creatività.</b>
           </p>
         </div>
       </div>
-      <p>
-        <b>Scienze del Testo</b> è stato per me un percorso di trasformazione. Mi ha permesso di osservare l’ambito umanistico da una prospettiva nuova, più critica e aperta alle tecnologie, sviluppando competenze trasversali difficili da acquisire altrove. L’incontro con l’informatica, che mi attirava e spaventava allo stesso tempo, si è rivelato decisivo: ho potuto lavorare con strumenti che rappresentano il futuro dello sviluppo delle discipline umanistiche e capire come integrarli naturalmente nella mia formazione. Da appassionata di materie scientifiche, questo corso mi ha permesso di riscoprire l’amore per la matematica, dimostrando che non esiste una scelta obbligata tra il mondo scientifico e quello umanistico. Ho imparato che è possibile coltivare entrambi, integrandoli passo dopo passo in un percorso completo e spendibile professionalmente.
-      </p>
-
-      <hr>
-      <h3 class="h5 mt-4">Di cosa mi occupo</h3>
-      <p>
-        Parallelamente agli studi ho maturato esperienza in comunicazione digitale, content creation e social media management. In particolare ho lavorato nel settore giornalistico, dove ho acquisito esperienza nella stesura e pubblicazione di articoli (con il conseguimento del tesserino da giornalista pubblicista), nella gestione delle piattaforme social (<b>Instagram</b>, <b>LinkedIn</b>, <b>Facebook</b>, <b>X</b>, <b>TikTok</b>), nell’analisi del traffico, nell’ottimizzazione SEO e nell’implementazione di chatbot su Telegram.
-        
-        Attraverso collaborazioni sia retribuite che su base volontaria, ho consolidato l’uso di <b>WordPress</b> come strumento editoriale, <b>Canva</b> per la creazione di contenuti grafici (post, caroselli, locandine) e l’integrazione di strumenti di <b>intelligenza artificiale</b> nei processi di produzione e gestione dei contenuti. Allo stesso tempo coltivo un forte interesse per la progettazione e sviluppo di siti web in HTML, CSS e JavaScript, competenze che applico sia in progetti personali, come questo sito, sia in progetti universitari.
-      </p>
-
-
-      <hr>
-      <h3 class="h5 mt-4">Competenze digitali</h3>
-      <ul>
-        <li>Content creation e gestione social media</li>
-        <li>SEO e ottimizzazione dei contenuti</li>
-        <li>WordPress &amp; gestione editoriale</li>
-        <li>Creazione grafica con Canva</li>
-        <li>Analisi del traffico web e dei dati social</li>
-        <li>Sviluppo web base (HTML, CSS, Bootstrap, JavaScript, PHP)</li>
-        <li>Python di base e utilizzo di strumenti AI</li>
-        <li>Markup in XML-TEI</li>
-      </ul>
-      <hr>
-
-      <h3 class="h5 mt-4">Competenze linguistiche</h3>
-      <ul>
-        <li><b>Italiano</b> - Madrelingua</li>
-        <li><b>Inglese</b> - C1</li>
-        <li><b>Spagnolo</b> - B2</li>
-        <li><b>Francese</b> - B1</li>
-      </ul>
     </div>
   </div>
 
