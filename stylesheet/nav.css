@@ -25,6 +25,7 @@
   margin-right: 0.5rem; /* Space between image and text */
   width: 3rem;
   height: 3rem;
+  filter: grayscale(100%);
 }
 
 .navbar-toggle {
