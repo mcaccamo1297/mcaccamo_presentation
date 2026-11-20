@@ -218,8 +218,10 @@
     .esperienze-grid {
         grid-template-columns: 1fr;
     }
-  
-  .esperienza-card p {
+
+    /* Su smartphone non c'è il passaggio del mouse:
+       il testo viene mostrato per intero */
+    .esperienza-card p {
         display: block;
         overflow: visible;
     }
