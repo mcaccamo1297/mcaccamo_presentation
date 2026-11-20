@@ -11,12 +11,6 @@
     padding: 20px;
   }
 
-
-  hr {
-    border: 1px solid;
-    margin: 10px 0;
-  }
-
   .navbar-collapse.open {
     display: flex;
   }
@@ -104,3 +98,130 @@
         padding: 10px;
     }
 }
+
+
+/* Griglia delle esperienze */
+.esperienze-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+/* Singola card */
+.esperienza-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e5e5e5;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.esperienza-card:hover {
+    transform: scale(1.025);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.14);
+}
+
+.esperienza-card h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.15rem;
+}
+
+.esperienza-card p {
+    line-height: 1.7;
+    text-align: justify;
+    margin-bottom: 0;
+}
+
+.esperienza-card i {
+    margin-right: 8px;
+    font-size: 1.2rem;
+}
+
+/* Link attestati */
+.esperienza-card .attestato-link {
+    display: inline-block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .esperienze-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .esperienza-card {
+        padding: 20px;
+    }
+
+    .esperienza-card:hover {
+        transform: translateY(-3px);
+    }
+}
+
+
+.esperienze-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+    align-items: start;
+}
+
+.esperienza-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e5e5e5;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.esperienza-card p {
+    line-height: 1.7;
+    text-align: justify;
+
+    /* Mostra solo un'anteprima */
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Al passaggio del mouse mostra il testo completo */
+.esperienza-card:hover p {
+    display: block;
+    overflow: visible;
+}
+
+.esperienza-card:hover {
+    transform: scale(1.025);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.14);
+    z-index: 2;
+}
+
+.esperienza-card h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.esperienza-card .attestato-link {
+    display: inline-block;
+    margin-top: 15px;
+}
+
+@media (max-width: 768px) {
+    .esperienze-grid {
+        grid-template-columns: 1fr;
+    }
+  
+  .esperienza-card p {
+        display: block;
+        overflow: visible;
+    }
+}
+
